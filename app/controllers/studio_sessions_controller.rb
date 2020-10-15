@@ -1,0 +1,2 @@
+class StudioSessionsController < ApplicationController
+end

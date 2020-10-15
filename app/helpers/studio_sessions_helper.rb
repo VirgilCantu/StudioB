@@ -1,0 +1,2 @@
+module StudioSessionsHelper
+end
