@@ -170,27 +170,35 @@ User.create(
 
 #----------------------Genres--------------------# 
 
-Genre.create(name:"Country")
-Genre.create(name:"Dance")
-Genre.create(name:"Hip-Hop")
-Genre.create(name:"Jazz")
-Genre.create(name:"Metal")
-Genre.create(name:"Pop")
-Genre.create(name:"R&B")
-Genre.create(name:"Reggae")
-Genre.create(name:"Rock")
-Genre.create(name:"Alternative")  
-Genre.create(name:"Soul")
-Genre.create(name:"Punk")
-Genre.create(name:"Electronic")
-Genre.create(name:"Rock")
-Genre.create(name:"Folk")
-Genre.create(name:"Latin")
-Genre.create(name:"Indie")
+Genre.create(name: "Country") 
+Genre.create(name: "Dance") 
+Genre.create(name: "Hip-Hop") 
+Genre.create(name: "Jazz") 
+Genre.create(name: "Metal") 
+Genre.create(name: "Pop") 
+Genre.create(name: "R&B") 
+Genre.create(name: "Reggae") 
+Genre.create(name: "Rock") 
+Genre.create(name: "Alternative")   
+Genre.create(name: "Soul") 
+Genre.create(name: "Punk") 
+Genre.create(name: "Electronic") 
+Genre.create(name: "Rock") 
+Genre.create(name: "Folk") 
+Genre.create(name: "Latin") 
+Genre.create(name: "Indie") 
 
 #----------------------Roles--------------------# 
 
-Role.create(name:"Producer")
-Role.create(name:"Artist")
-Role.create(name:"Musician")
-Role.create(name:"Studio Manager")
+Role.create(name: "Producer")
+Role.create(name: "Artist")
+Role.create(name: "Musician")
+Role.create(name: "Studio Manager")
+
+#----------------------Instruments--------------------# 
+
+Instrument.create(name: "Legacy Maple", brand: "Ludwig", category: "Percussion", type: "Drum Kit", ) #Earl Palmer
+Instrument.create(name: "Selmer Paris 52JM Alto", brand: "Conn-Selmer", category: "Brass", type: "Saxophone", ) #Gene Cipriano
+Instrument.create(name: "Fender Precision Bass", brand: "Fender", category: "String", type: "Bass Guitar", ) #Carol Kaye
+Instrument.create(name: "Super Classic Blue Sparkle", brand: "Ludwig", category: "Percussion", type: "Drum Kit", ) #Hal Blaine
+Instrument.create(name: "Hammond B-3", brand: "The Hammond Organ Company", category: "Keyboard", type: "Electric Organ", ) #Billy Preston
