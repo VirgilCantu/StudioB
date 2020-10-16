@@ -1,7 +1,7 @@
 class CreateStudioSessions < ActiveRecord::Migration[6.0]
   def change
     create_table :studio_sessions do |t|
-      t.datetime :time
+      t.datetime :session_time
       t.integer :duration
       t.string :special_req
       t.integer :cost

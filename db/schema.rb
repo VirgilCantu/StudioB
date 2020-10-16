@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 2020_10_16_210206) do
   end
 
   create_table "studio_sessions", force: :cascade do |t|
-    t.datetime "time"
+    t.datetime "session_time"
     t.integer "duration"
     t.string "special_req"
     t.integer "cost"
