@@ -9,7 +9,7 @@
 
 #----------------------Artists--------------------#
 
-User.create(
+billie_eilish = User.create(
     name: "Billie Eilish Pirate Baird O'Connell", 
     email: "billie@billieeilish.com", 
     password: "billieeilish", 
@@ -18,7 +18,7 @@ User.create(
     picture: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Billie_Eilish_2019_by_Glenn_Francis_%28cropped%29_2.jpg",
     stage_name: "Billie Eilish" )
 
-User.create(
+post_malone = User.create(
     name: "Austin Richard Post", 
     email: "austin@postmalone.com", 
     password: "postmalone", 
@@ -27,7 +27,7 @@ User.create(
     picture: "https://upload.wikimedia.org/wikipedia/commons/1/12/Post_Malone_at_the_2019_American_Music_Awards.png",
     stage_name: "Post Malone" )
 
-User.create(
+lizzo = User.create(
     name: "Melissa Viviane Jefferson", 
     email: "melissa@lizzo.com", 
     password: "lizzo", 
@@ -36,7 +36,7 @@ User.create(
     picture: "https://upload.wikimedia.org/wikipedia/commons/9/9d/LizzoBrixt06Nov19-10_%2849216792848%29_%28cropped%29.jpg",
     stage_name: "Lizzo" )
 
-User.create(
+harry_styles = User.create(
     name: "Harry Edward Styles", 
     email: "harry@harrystyles.com", 
     password: "harrystyles", 
@@ -45,7 +45,7 @@ User.create(
     picture: "https://upload.wikimedia.org/wikipedia/commons/9/9e/Harry_Styles_November_2014.jpg",
     stage_name: "Harry Styles" )
 
-User.create(
+drake = User.create(
     name: "Aubrey Drake Graham", 
     email: "aubrey@drake.com", 
     password: "drake", 
@@ -56,7 +56,7 @@ User.create(
 
 #----------------------Producers--------------------#    
 
-User.create(
+rick_rubin = User.create(
     name: "Frederick Jay Rubin", 
     email: "frederick@rickrubin.com", 
     password: "rickrubin", 
@@ -66,7 +66,7 @@ User.create(
     stage_name: "Rick Rubin" )
 
 
-User.create(
+dj khaled = User.create(
     name: "Khaled Mohamed Khaled", 
     email: "khaled@djkhaled.com", 
     password: "djkhaled", 
@@ -76,7 +76,7 @@ User.create(
     stage_name: "DJ Khaled" )
 
 
-User.create(
+timbaland = User.create(
     name: "Timothy Zachary Mosley", 
     email: "timothy@timbaland.com", 
     password: "timbaland", 
@@ -86,7 +86,7 @@ User.create(
     stage_name: "Timbaland" )
 
 
-User.create(
+trent_reznor = User.create(
     name: "Michael Trent Reznor", 
     email: "michael@trentreznor.com", 
     password: "trentreznor", 
@@ -95,7 +95,7 @@ User.create(
     picture: "https://upload.wikimedia.org/wikipedia/commons/c/c9/Trent_Reznor-FEB2008_%28cropped%2C_but_higher_quality%29_%282%29.jpg",
     stage_name: "Trent Reznor" )
 
-User.create(
+benny_blanco = User.create(
     name: "Benjamin Joseph Levin", 
     email: "benjamin@bennyblanco.com", 
     password: "bennyblanco", 
@@ -106,7 +106,7 @@ User.create(
 
 #----------------------Musicians--------------------#  
 
-User.create(
+earl_palmer = User.create(
     name: "Earl Cyril Palmer", 
     email: "earl@earlpalmer.com", 
     password: "earlpalmer", 
@@ -115,7 +115,7 @@ User.create(
     picture: "https://upload.wikimedia.org/wikipedia/commons/e/e9/Earl_Palmer.jpg",
     stage_name: "Earl Palmer" )
 
-User.create(
+gene_cipriano = User.create(
     name: "Eugene Cipriano", 
     email: "eugene@genecipriano.com", 
     password: "genecipriano", 
@@ -125,7 +125,7 @@ User.create(
     stage_name: "Gene Cipriano" )
 
 
-User.create(
+hal_blaine = User.create(
     name: "Harold Simon Belsky", 
     email: "harold@halblaine.com", 
     password: "halblaine", 
@@ -135,7 +135,7 @@ User.create(
     stage_name: "Hal Blaine" )
 
 
-User.create(
+carol_kaye = User.create(
     name: "Carol Kaye", 
     email: "carol@carolkaye.com", 
     password: "carolkaye", 
@@ -144,7 +144,7 @@ User.create(
     picture: "https://musicguy247.typepad.com/.a/6a01a3fcec1396970b022ad3791862200c-pi",
     stage_name: "Carol Kaye" )
 
-User.create(
+billy_preston = User.create(
     name: "William Everett Preston", 
     email: "billy@billypreston.com", 
     password: "billypreston", 
@@ -155,42 +155,42 @@ User.create(
 
 #----------------------Genres--------------------# 
 
-Genre.create(name: "Country") 
-Genre.create(name: "Dance") 
-Genre.create(name: "Hip-Hop") 
-Genre.create(name: "Jazz") 
-Genre.create(name: "Metal") 
-Genre.create(name: "Pop") 
-Genre.create(name: "R&B") 
-Genre.create(name: "Reggae") 
-Genre.create(name: "Rock") 
-Genre.create(name: "Alternative")   
-Genre.create(name: "Soul") 
-Genre.create(name: "Punk") 
-Genre.create(name: "Electronic") 
-Genre.create(name: "Rock") 
-Genre.create(name: "Folk") 
-Genre.create(name: "Latin") 
-Genre.create(name: "Indie") 
+country = Genre.create(name: "Country") 
+dance = Genre.create(name: "Dance") 
+hip-hop = Genre.create(name: "Hip-Hop") 
+jazz = Genre.create(name: "Jazz") 
+metal = Genre.create(name: "Metal") 
+pop = Genre.create(name: "Pop") 
+rb = Genre.create(name: "R&B") 
+reggae = Genre.create(name: "Reggae") 
+rock = Genre.create(name: "Rock") 
+alternative = Genre.create(name: "Alternative")   
+soul = Genre.create(name: "Soul") 
+punk = Genre.create(name: "Punk") 
+electronic = Genre.create(name: "Electronic") 
+rock = Genre.create(name: "Rock") 
+folk = Genre.create(name: "Folk") 
+latin = Genre.create(name: "Latin") 
+indie = Genre.create(name: "Indie") 
 
 #----------------------Roles--------------------# 
 
-Role.create(name: "Producer")
-Role.create(name: "Artist")
-Role.create(name: "Musician")
-Role.create(name: "Studio Manager")
+producer = Role.create(name: "Producer")
+artist = Role.create(name: "Artist")
+musician = Role.create(name: "Musician")
+studio_manager = Role.create(name: "Studio Manager")
 
 #----------------------Instruments--------------------# 
 
-Instrument.create(name: "Legacy Maple", brand: "Ludwig", category: "Percussion", inst_type: "Drum Kit", ) #Earl Palmer
-Instrument.create(name: "Selmer Paris 52JM Alto", brand: "Conn-Selmer", category: "Brass", inst_type: "Saxophone", ) #Gene Cipriano
-Instrument.create(name: "Fender Precision Bass", brand: "Fender", category: "String", inst_type: "Bass Guitar", ) #Carol Kaye
-Instrument.create(name: "Super Classic Blue Sparkle", brand: "Ludwig", category: "Percussion", inst_type: "Drum Kit", ) #Hal Blaine
-Instrument.create(name: "Hammond B-3", brand: "Hammond Organ Company", category: "Keyboard", inst_type: "Electric Organ", ) #Billy Preston
+legacy = Instrument.create(name: "Legacy Maple", brand: "Ludwig", category: "Percussion", inst_type: "Drum Kit", ) #Earl Palmer
+selmer = Instrument.create(name: "Selmer Paris 52JM Alto", brand: "Conn-Selmer", category: "Brass", inst_type: "Saxophone", ) #Gene Cipriano
+fender = Instrument.create(name: "Fender Precision Bass", brand: "Fender", category: "String", inst_type: "Bass Guitar", ) #Carol Kaye
+blue = Instrument.create(name: "Super Classic Blue Sparkle", brand: "Ludwig", category: "Percussion", inst_type: "Drum Kit", ) #Hal Blaine
+hammond = Instrument.create(name: "Hammond B-3", brand: "Hammond Organ Company", category: "Keyboard", inst_type: "Electric Organ", ) #Billy Preston
 
 #----------------------Studios--------------------# 
 
-Studio.create(
+capitol = Studio.create(
     name: "Capitol Studios", 
     location: "Los Angeles, California", 
     hourly_rate: 3000, 
@@ -198,7 +198,7 @@ Studio.create(
     description: "", 
     picture: "https://www.capitolstudios.com/wp-content/uploads/2017/11/mixing.jpg")
 
-Studio.create(
+abbey_road = Studio.create(
     name: "Abbey Road Studios", 
     location: "London, United Kingdom", 
     hourly_rate: 10000, 
@@ -206,7 +206,7 @@ Studio.create(
     description: "", 
     picture: "http://www.bestdjgearreviews.com/wp-content/uploads/2019/05/ask-abbey-road-chris-bolster-recording-control-room@1400x1050.jpg")
 
-Studio.create(
+electric_lady = Studio.create(
     name: "Electric Lady Studios", 
     location: "New York City, New York", 
     hourly_rate: 5000, 
@@ -214,7 +214,7 @@ Studio.create(
     description: "", 
     picture: "https://i2.wp.com/nyunews.com/wp-content/uploads/2020/03/pasted-image-0.png?fit=1500%2C843&ssl=1")
 
-Studio.create(
+fame = Studio.create(
     name: "FAME Recording Studios", 
     location: "Muscle Shoals, Alabama", 
     hourly_rate: 1000, 
@@ -222,7 +222,7 @@ Studio.create(
     description: "", 
     picture: "https://i1.wp.com/newsletter.lotosnile.com/uploads/1569325988.jpg?resize=578%2C325&ssl=1")
 
-Studio.create(
+wiseloord = Studio.create(
     name: "Wiseloord Studios", 
     location: "Hilversum, Netherlands", 
     hourly_rate: 7000, 
@@ -230,3 +230,4 @@ Studio.create(
     description: "", 
     picture: "https://milocostudios.com/wp-content/uploads/2017/10/W-2.jpg")
 
+#----------------------Equipment--------------------# 
