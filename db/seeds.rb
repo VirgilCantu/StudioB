@@ -6,6 +6,32 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+#----------------------Genres--------------------# 
+
+country = Genre.create(name: "Country") 
+dance = Genre.create(name: "Dance") 
+hip-hop = Genre.create(name: "Hip-Hop") 
+jazz = Genre.create(name: "Jazz") 
+metal = Genre.create(name: "Metal") 
+pop = Genre.create(name: "Pop") 
+rb = Genre.create(name: "R&B") 
+reggae = Genre.create(name: "Reggae") 
+rock = Genre.create(name: "Rock") 
+alternative = Genre.create(name: "Alternative")   
+soul = Genre.create(name: "Soul") 
+punk = Genre.create(name: "Punk") 
+electronic = Genre.create(name: "Electronic") 
+rock = Genre.create(name: "Rock") 
+folk = Genre.create(name: "Folk") 
+latin = Genre.create(name: "Latin") 
+indie = Genre.create(name: "Indie") 
+
+#----------------------Roles--------------------# 
+
+producer = Role.create(name: "Producer")
+artist = Role.create(name: "Artist")
+musician = Role.create(name: "Musician")
+studio_manager = Role.create(name: "Studio Manager")
 
 #----------------------Artists--------------------#
 
@@ -18,6 +44,9 @@ billie_eilish = User.create(
     picture: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Billie_Eilish_2019_by_Glenn_Francis_%28cropped%29_2.jpg",
     stage_name: "Billie Eilish" )
 
+billie_eilish.roles << artist
+billie_eilish.genres << pop
+
 post_malone = User.create(
     name: "Austin Richard Post", 
     email: "austin@postmalone.com", 
@@ -26,6 +55,9 @@ post_malone = User.create(
     can_travel: false, 
     picture: "https://upload.wikimedia.org/wikipedia/commons/1/12/Post_Malone_at_the_2019_American_Music_Awards.png",
     stage_name: "Post Malone" )
+
+post_malone.roles << artist
+post_malone.genres << hip-hop
 
 lizzo = User.create(
     name: "Melissa Viviane Jefferson", 
@@ -36,6 +68,9 @@ lizzo = User.create(
     picture: "https://upload.wikimedia.org/wikipedia/commons/9/9d/LizzoBrixt06Nov19-10_%2849216792848%29_%28cropped%29.jpg",
     stage_name: "Lizzo" )
 
+lizzo.roles << artist
+lizzo.genres << hip-hop
+
 harry_styles = User.create(
     name: "Harry Edward Styles", 
     email: "harry@harrystyles.com", 
@@ -45,6 +80,9 @@ harry_styles = User.create(
     picture: "https://upload.wikimedia.org/wikipedia/commons/9/9e/Harry_Styles_November_2014.jpg",
     stage_name: "Harry Styles" )
 
+harry_styles.roles << artist
+harry_styles.genres << pop
+
 drake = User.create(
     name: "Aubrey Drake Graham", 
     email: "aubrey@drake.com", 
@@ -53,6 +91,9 @@ drake = User.create(
     can_travel: true, 
     picture: "https://upload.wikimedia.org/wikipedia/commons/1/15/Drake_at_The_Carter_Effect_2017_%2836818935200%29_%28cropped%29.jpg",
     stage_name: "Drake" )
+
+drake.roles << artist
+drake.genres << hip-hop
 
 #----------------------Producers--------------------#    
 
@@ -152,33 +193,6 @@ billy_preston = User.create(
     can_travel: true, 
     picture: "https://upload.wikimedia.org/wikipedia/commons/8/80/Billy_Preston.jpg",
     stage_name: "Billy Preston" )
-
-#----------------------Genres--------------------# 
-
-country = Genre.create(name: "Country") 
-dance = Genre.create(name: "Dance") 
-hip-hop = Genre.create(name: "Hip-Hop") 
-jazz = Genre.create(name: "Jazz") 
-metal = Genre.create(name: "Metal") 
-pop = Genre.create(name: "Pop") 
-rb = Genre.create(name: "R&B") 
-reggae = Genre.create(name: "Reggae") 
-rock = Genre.create(name: "Rock") 
-alternative = Genre.create(name: "Alternative")   
-soul = Genre.create(name: "Soul") 
-punk = Genre.create(name: "Punk") 
-electronic = Genre.create(name: "Electronic") 
-rock = Genre.create(name: "Rock") 
-folk = Genre.create(name: "Folk") 
-latin = Genre.create(name: "Latin") 
-indie = Genre.create(name: "Indie") 
-
-#----------------------Roles--------------------# 
-
-producer = Role.create(name: "Producer")
-artist = Role.create(name: "Artist")
-musician = Role.create(name: "Musician")
-studio_manager = Role.create(name: "Studio Manager")
 
 #----------------------Instruments + Assoc.--------------------# 
 

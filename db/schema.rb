@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_15_205256) do
+ActiveRecord::Schema.define(version: 2020_10_16_210206) do
 
   create_table "equipment", force: :cascade do |t|
     t.string "name"
@@ -67,6 +67,15 @@ ActiveRecord::Schema.define(version: 2020_10_15_205256) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "user_genres", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "genre_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["genre_id"], name: "index_user_genres_on_genre_id"
+    t.index ["user_id"], name: "index_user_genres_on_user_id"
+  end
+
   create_table "user_roles", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "role_id", null: false
@@ -103,6 +112,8 @@ ActiveRecord::Schema.define(version: 2020_10_15_205256) do
   add_foreign_key "equipment", "studios"
   add_foreign_key "instruments", "users"
   add_foreign_key "studio_sessions", "studios"
+  add_foreign_key "user_genres", "genres"
+  add_foreign_key "user_genres", "users"
   add_foreign_key "user_roles", "roles"
   add_foreign_key "user_roles", "users"
   add_foreign_key "user_sessions", "studio_sessions"

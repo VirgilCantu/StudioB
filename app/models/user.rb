@@ -1,7 +1,8 @@
 class User < ApplicationRecord
   has_secure_password
   
-  belongs_to :genre
+  has_many :user_genres
+  has_many :genres, through: :user_genres
   has_many :user_roles
   has_many :roles, through: :user_roles
   has_many :user_sessions
