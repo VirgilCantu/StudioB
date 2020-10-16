@@ -111,7 +111,61 @@ User.create(
     location: "New York City, New York",
     bio:,
     can_travel: false, 
-    picture: "https://upload.wikimedia.org/wikipedia/commons/c/c9/Trent_Reznor-FEB2008_%28cropped%2C_but_higher_quality%29_%282%29.jpg",
+    picture: "https://upload.wikimedia.org/wikipedia/commons/3/35/Benny_blanco_pi%C3%B1ata_2019.png",
     stage_name: "Benny Blanco" )
+
+#----------------------Musicians--------------------#  
+
+User.create(
+    name: "Earl Cyril Palmer", 
+    email: "earl@earlpalmer.com", 
+    password: "earlpalmer", 
+    location: "New Orleans, Louisiana",
+    bio:,
+    can_travel: true, 
+    picture: "https://upload.wikimedia.org/wikipedia/commons/e/e9/Earl_Palmer.jpg",
+    stage_name: "Earl Palmer" )
+
+User.create(
+    name: "Eugene Cipriano", 
+    email: "eugene@genecipriano.com", 
+    password: "genecipriano", 
+    location: "Los Angeles, California",
+    bio:,
+    can_travel: false, 
+    picture: "https://makinglifeswing.files.wordpress.com/2019/09/genecipriano.jpg",
+    stage_name: "Gene Cipriano" )
+
+
+User.create(
+    name: "Harold Simon Belsky", 
+    email: "harold@halblaine.com", 
+    password: "halblaine", 
+    location: "Los Angeles, California",
+    bio:,
+    can_travel: true, 
+    picture: "https://m.media-amazon.com/images/M/MV5BMjA1MDU0MTYyNF5BMl5BanBnXkFtZTgwNzU0NDI2NzM@._V1_SY1000_CR0,0,807,1000_AL_.jpg",
+    stage_name: "Hal Blaine" )
+
+
+User.create(
+    name: "Carol Kaye", 
+    email: "carol@carolkaye.com", 
+    password: "carolkaye", 
+    location: "Los Angeles, California",
+    bio:,
+    can_travel: false, 
+    picture: "https://musicguy247.typepad.com/.a/6a01a3fcec1396970b022ad3791862200c-pi",
+    stage_name: "Carol Kaye" )
+
+User.create(
+    name: "William Everett Preston", 
+    email: "billy@billypreston.com", 
+    password: "billypreston", 
+    location: "Houston, Texas",
+    bio:,
+    can_travel: true, 
+    picture: "https://upload.wikimedia.org/wikipedia/commons/8/80/Billy_Preston.jpg",
+    stage_name: "Billy Preston" )
 
 
