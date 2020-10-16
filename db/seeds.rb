@@ -43,7 +43,7 @@ User.create(
     name: "Harry Edward Styles", 
     email: "harry@harrystyles.com", 
     password: "harrystyles", 
-    location: "London, England", 
+    location: "London, United Kingdom", 
     bio:,
     can_travel: false, 
     picture: "https://upload.wikimedia.org/wikipedia/commons/9/9e/Harry_Styles_November_2014.jpg",
@@ -201,4 +201,48 @@ Instrument.create(name: "Legacy Maple", brand: "Ludwig", category: "Percussion",
 Instrument.create(name: "Selmer Paris 52JM Alto", brand: "Conn-Selmer", category: "Brass", type: "Saxophone", ) #Gene Cipriano
 Instrument.create(name: "Fender Precision Bass", brand: "Fender", category: "String", type: "Bass Guitar", ) #Carol Kaye
 Instrument.create(name: "Super Classic Blue Sparkle", brand: "Ludwig", category: "Percussion", type: "Drum Kit", ) #Hal Blaine
-Instrument.create(name: "Hammond B-3", brand: "The Hammond Organ Company", category: "Keyboard", type: "Electric Organ", ) #Billy Preston
+Instrument.create(name: "Hammond B-3", brand: "Hammond Organ Company", category: "Keyboard", type: "Electric Organ", ) #Billy Preston
+
+#----------------------Studios--------------------# 
+
+Studio.create(
+    name: "Capitol Studios", 
+    location: "Los Angeles, California", 
+    hourly_rate: 3000, 
+    features: "4 studios, 8 subterranean echo chambers. Retractable wall to join Studio A and Studio B for up to 75 musicians in soundtrack/orchestral sessions", 
+    description: "", 
+    picture: "https://www.capitolstudios.com/wp-content/uploads/2017/11/mixing.jpg")
+
+Studio.create(
+    name: "Abbey Road Studios", 
+    location: "London, United Kingdom", 
+    hourly_rate: 10,000, 
+    features: "6 studios, restaurant, bar, private garden, one of the oldest and most famous recording studios in the world. ", 
+    description: "", 
+    picture: "http://www.bestdjgearreviews.com/wp-content/uploads/2019/05/ask-abbey-road-chris-bolster-recording-control-room@1400x1050.jpg")
+
+Studio.create(
+    name: "Electric Lady Studios", 
+    location: "New York City, New York", 
+    hourly_rate: 5000, 
+    features: "4 studios, mixing suite", 
+    description: "", 
+    picture: "https://i2.wp.com/nyunews.com/wp-content/uploads/2020/03/pasted-image-0.png?fit=1500%2C843&ssl=1")
+
+Studio.create(
+    name: "FAME Recording Studios", 
+    location: "Muscle Shoals, Alabama", 
+    hourly_rate: 1000, 
+    features: "2 studios, historic facilites, collection of historic instruments, Studio B lounge for clients", 
+    description: "", 
+    picture: "https://i1.wp.com/newsletter.lotosnile.com/uploads/1569325988.jpg?resize=578%2C325&ssl=1")
+
+Studio.create(
+    name: "Wiseloord Studios", 
+    location: "Hilversum, Netherlands", 
+    hourly_rate: 7000, 
+    features: "5 studios, 2 specifically for mastering, writing rooms, 3D audio room", 
+    description: "", 
+    picture: "https://milocostudios.com/wp-content/uploads/2017/10/W-2.jpg")
+
+
