@@ -232,8 +232,33 @@ wiseloord = Studio.create(
 
 #----------------------Equipment + Studio Assoc.--------------------# 
 
-Equipment.create(
-    name: "Neve 88RS 72",
-    brand: "Neve",
-    category: "",
+capitol.equipments.create(
+    name: "AMS Neve 88RS 72",
+    brand: "AMS Neve",
+    category: "Recording Console",
 )
+
+abbey_road.equipments.create(
+    name: "AMS Neve 88RS 60",
+    brand: "AMS Neve",
+    category: "Recording Console",
+)
+
+electric_lady.equipments.create(
+    name: "SSL 9000J",
+    brand: "Solid State Logic",
+    category: "Recording Console",
+)
+
+fame.equipments.create(
+    name: "Neve 8232",
+    brand: "AMS Neve",
+    category: "Recording Console",
+)
+
+wiseloord.equipments.create(
+    name: "Euphonix System 5",
+    brand: "Euphonix",
+    category: "Recording Console",
+)
+
