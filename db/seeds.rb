@@ -19,7 +19,7 @@ reggae = Genre.create(name: "Reggae")
 rock = Genre.create(name: "Rock") 
 alternative = Genre.create(name: "Alternative")   
 soul = Genre.create(name: "Soul") 
-punk = Genre.create(name: "Punk") 
+funk = Genre.create(name: "Funk") 
 electronic = Genre.create(name: "Electronic") 
 rock = Genre.create(name: "Rock") 
 folk = Genre.create(name: "Folk") 
@@ -106,8 +106,8 @@ rick_rubin = User.create(
     picture: "https://upload.wikimedia.org/wikipedia/commons/4/43/RickRubinSept09.jpg",
     stage_name: "Rick Rubin" )
 
-    rick_rubin.roles << producer
-    rick_rubin.genres << hip-hop, metal, alternative, rock
+rick_rubin.roles << producer
+rick_rubin.genres << hip-hop, metal, alternative, rock
 
 dj_khaled = User.create(
     name: "Khaled Mohamed Khaled", 
@@ -118,8 +118,8 @@ dj_khaled = User.create(
     picture: "https://upload.wikimedia.org/wikipedia/commons/a/af/DJ_Khaled_2012.jpg",
     stage_name: "DJ Khaled" )
 
-    dj_khaled.roles << producer, artist
-    dj_khaled.genres << hip-hop, reggae, rb
+dj_khaled.roles << producer, artist
+dj_khaled.genres << hip-hop, reggae, rb
 
 timbaland = User.create(
     name: "Timothy Zachary Mosley", 
@@ -130,8 +130,8 @@ timbaland = User.create(
     picture: "https://upload.wikimedia.org/wikipedia/commons/5/5a/Timbaland1292010.jpg",
     stage_name: "Timbaland" )
 
-    timbaland.roles << producer, artist 
-    timbaland.genres << hip-hop, pop, rb
+timbaland.roles << producer, artist 
+timbaland.genres << hip-hop, pop, rb
 
 
 trent_reznor = User.create(
@@ -143,8 +143,8 @@ trent_reznor = User.create(
     picture: "https://upload.wikimedia.org/wikipedia/commons/c/c9/Trent_Reznor-FEB2008_%28cropped%2C_but_higher_quality%29_%282%29.jpg",
     stage_name: "Trent Reznor" )
 
-    trent_reznor.roles << producer, artist
-    trent_reznor.genres << alternative, metal, rock
+trent_reznor.roles << producer, artist
+trent_reznor.genres << alternative, metal, rock
 
 benny_blanco = User.create(
     name: "Benjamin Joseph Levin", 
@@ -155,8 +155,8 @@ benny_blanco = User.create(
     picture: "https://upload.wikimedia.org/wikipedia/commons/3/35/Benny_blanco_pi%C3%B1ata_2019.png",
     stage_name: "Benny Blanco" )
 
-    trent_reznor.roles << producer
-    trent_reznor.genres << hip-hop, pop, rb
+benny_blanco.roles << producer
+benny_blanco.genres << hip-hop, pop
 
 #----------------------Musicians--------------------#  
 
@@ -169,6 +169,9 @@ earl_palmer = User.create(
     picture: "https://upload.wikimedia.org/wikipedia/commons/e/e9/Earl_Palmer.jpg",
     stage_name: "Earl Palmer" )
 
+earl_palmer.roles << musician
+earl_palmer.genres << jazz, soul, rock, funk
+
 gene_cipriano = User.create(
     name: "Eugene Cipriano", 
     email: "eugene@genecipriano.com", 
@@ -178,6 +181,8 @@ gene_cipriano = User.create(
     picture: "https://makinglifeswing.files.wordpress.com/2019/09/genecipriano.jpg",
     stage_name: "Gene Cipriano" )
 
+gene_cipriano.roles << musician
+gene_cipriano.genres << jazz, soul, rock
 
 hal_blaine = User.create(
     name: "Harold Simon Belsky", 
@@ -188,6 +193,8 @@ hal_blaine = User.create(
     picture: "https://m.media-amazon.com/images/M/MV5BMjA1MDU0MTYyNF5BMl5BanBnXkFtZTgwNzU0NDI2NzM@._V1_SY1000_CR0,0,807,1000_AL_.jpg",
     stage_name: "Hal Blaine" )
 
+hal_blaine.roles << musician
+hal_blaine.genres << jazz, soul, rock
 
 carol_kaye = User.create(
     name: "Carol Kaye", 
@@ -198,6 +205,9 @@ carol_kaye = User.create(
     picture: "https://musicguy247.typepad.com/.a/6a01a3fcec1396970b022ad3791862200c-pi",
     stage_name: "Carol Kaye" )
 
+carol_kaye.roles << musician
+carol_kaye.genres << jazz, soul, rock, pop
+
 billy_preston = User.create(
     name: "William Everett Preston", 
     email: "billy@billypreston.com", 
@@ -207,6 +217,8 @@ billy_preston = User.create(
     picture: "https://upload.wikimedia.org/wikipedia/commons/8/80/Billy_Preston.jpg",
     stage_name: "Billy Preston" )
 
+billy_preston.roles << musician
+billy_preston.genres << jazz, soul, rb, funk  
 #----------------------Instruments + Assoc.--------------------# 
 
 earl_palmer.instruments.create(name: "Legacy Maple", brand: "Ludwig", category: "Percussion", inst_type: "Drum Kit", ) #Earl Palmer
