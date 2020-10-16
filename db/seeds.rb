@@ -168,23 +168,29 @@ User.create(
     picture: "https://upload.wikimedia.org/wikipedia/commons/8/80/Billy_Preston.jpg",
     stage_name: "Billy Preston" )
 
-
 #----------------------Genres--------------------# 
 
-    Genre.create(name:"Country")
-    Genre.create(name:"Dance")
-    Genre.create(name:"Hip-Hop")
-    Genre.create(name:"Jazz")
-    Genre.create(name:"Metal")
-    Genre.create(name:"Pop")
-    Genre.create(name:"R&B")
-    Genre.create(name:"Reggae")
-    Genre.create(name:"Rock")
-    Genre.create(name:"Alternative")  
-    Genre.create(name:"Soul")
-    Genre.create(name:"Punk")
-    Genre.create(name:"Electronic")
-    Genre.create(name:"Rock")
-    Genre.create(name:"Folk")
-    Genre.create(name:"Latin")
-    Genre.create(name:"Indie")
+Genre.create(name:"Country")
+Genre.create(name:"Dance")
+Genre.create(name:"Hip-Hop")
+Genre.create(name:"Jazz")
+Genre.create(name:"Metal")
+Genre.create(name:"Pop")
+Genre.create(name:"R&B")
+Genre.create(name:"Reggae")
+Genre.create(name:"Rock")
+Genre.create(name:"Alternative")  
+Genre.create(name:"Soul")
+Genre.create(name:"Punk")
+Genre.create(name:"Electronic")
+Genre.create(name:"Rock")
+Genre.create(name:"Folk")
+Genre.create(name:"Latin")
+Genre.create(name:"Indie")
+
+#----------------------Roles--------------------# 
+
+Role.create(name:"Producer")
+Role.create(name:"Artist")
+Role.create(name:"Musician")
+Role.create(name:"Studio Manager")
