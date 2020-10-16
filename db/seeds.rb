@@ -230,4 +230,10 @@ wiseloord = Studio.create(
     description: "", 
     picture: "https://milocostudios.com/wp-content/uploads/2017/10/W-2.jpg")
 
-#----------------------Equipment--------------------# 
+#----------------------Equipment + Studio Assoc.--------------------# 
+
+Equipment.create(
+    name: "Neve 88RS 72",
+    brand: "Neve",
+    category: "",
+)

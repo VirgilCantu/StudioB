@@ -16,7 +16,6 @@ ActiveRecord::Schema.define(version: 2020_10_15_205256) do
     t.string "name"
     t.string "brand"
     t.string "category"
-    t.string "eq_type"
     t.integer "studio_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
