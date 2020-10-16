@@ -103,10 +103,8 @@ ActiveRecord::Schema.define(version: 2020_10_16_210206) do
     t.boolean "can_travel"
     t.string "picture"
     t.string "stage_name"
-    t.integer "genre_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["genre_id"], name: "index_users_on_genre_id"
   end
 
   add_foreign_key "equipment", "studios"
@@ -118,5 +116,4 @@ ActiveRecord::Schema.define(version: 2020_10_16_210206) do
   add_foreign_key "user_roles", "users"
   add_foreign_key "user_sessions", "studio_sessions"
   add_foreign_key "user_sessions", "users"
-  add_foreign_key "users", "genres"
 end

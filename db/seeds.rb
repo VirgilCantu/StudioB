@@ -106,8 +106,10 @@ rick_rubin = User.create(
     picture: "https://upload.wikimedia.org/wikipedia/commons/4/43/RickRubinSept09.jpg",
     stage_name: "Rick Rubin" )
 
+    rick_rubin.roles << producer
+    rick_rubin.genres << hip-hop, metal, alternative, rock
 
-dj khaled = User.create(
+dj_khaled = User.create(
     name: "Khaled Mohamed Khaled", 
     email: "khaled@djkhaled.com", 
     password: "djkhaled", 
@@ -116,6 +118,8 @@ dj khaled = User.create(
     picture: "https://upload.wikimedia.org/wikipedia/commons/a/af/DJ_Khaled_2012.jpg",
     stage_name: "DJ Khaled" )
 
+    dj_khaled.roles << producer, artist
+    dj_khaled.genres << hip-hop, reggae, rb
 
 timbaland = User.create(
     name: "Timothy Zachary Mosley", 
@@ -125,6 +129,9 @@ timbaland = User.create(
     can_travel: false, 
     picture: "https://upload.wikimedia.org/wikipedia/commons/5/5a/Timbaland1292010.jpg",
     stage_name: "Timbaland" )
+
+    timbaland.roles << producer, artist 
+    timbaland.genres << hip-hop, pop, rb
 
 
 trent_reznor = User.create(
@@ -136,6 +143,9 @@ trent_reznor = User.create(
     picture: "https://upload.wikimedia.org/wikipedia/commons/c/c9/Trent_Reznor-FEB2008_%28cropped%2C_but_higher_quality%29_%282%29.jpg",
     stage_name: "Trent Reznor" )
 
+    trent_reznor.roles << producer, artist
+    trent_reznor.genres << alternative, metal, rock
+
 benny_blanco = User.create(
     name: "Benjamin Joseph Levin", 
     email: "benjamin@bennyblanco.com", 
@@ -144,6 +154,9 @@ benny_blanco = User.create(
     can_travel: false, 
     picture: "https://upload.wikimedia.org/wikipedia/commons/3/35/Benny_blanco_pi%C3%B1ata_2019.png",
     stage_name: "Benny Blanco" )
+
+    trent_reznor.roles << producer
+    trent_reznor.genres << hip-hop, pop, rb
 
 #----------------------Musicians--------------------#  
 
