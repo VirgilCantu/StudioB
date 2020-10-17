@@ -1,29 +1,43 @@
-<h1>Create a New User on StudioB</h1>
-
+<h1>Join StudioB</h1>
 
 <%= form_for @user do |f| %>
     <%= f.label :name %>
+    <br>
     <%= f.text_field :name %>
     <br>
+    <br>
     <%= f.label :email %>
+    <br>
     <%= f.text_field :email %>
     <br>
+    <br>
     <%= f.label :password %>
+    <br>
     <%= f.text_field :password %>
     <br>
+    <br>
     <%= f.label :location, "Current Location" %>
+    <br>
     <%= f.text_field :location %>
     <br>
-    <%= f.label :bio %>
-    <%= f.text_field :bio %>
     <br>
-    <%= f.label :can_travel, "Willing to Travel?" %>
+    <%= f.label :bio, "Let Us Know About Yourself:"%>
+    <br>
+    <%= f.text_area :bio %>
+    <br>
+    <br>
+    <%= f.label :can_travel, "Are You Willing to Travel?" %>
     <%= f.check_box :can_travel %>
     <br>
-    <%= f.label :picture %>
+    <br>
+    <%= f.label :picture, "Picture Link" %>
+    <br>
     <%= f.text_field :picture %>
     <br>
+    <br>
     <%= f.label :stage_name, "Stage/Performance Name" %>
+    <br>
+    <br>
     <%= f.text_field :stage_name %>
     <br>
     <br>
