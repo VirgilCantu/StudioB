@@ -1,0 +1,33 @@
+<%= form_for @studio do |f| %>
+    <%= f.label :name %>
+    <br>
+    <%= f.text_field :name %>
+    <br>
+    <br>
+    <%= f.label :location, "Current Location" %>
+    <br>
+    <%= f.text_field :location %>
+    <br>
+    <br>
+    <%= f.label :hourly_rate, "Studio Hourly Rate (USD)" %>
+    <br>
+    <%= f.number_field :hourly_rate %>
+    <br>
+    <br>
+    <%= f.label :features, "Studio Features and Amenities" %>
+    <br>
+    <%= f.text_area :features %>
+    <br>
+    <br>
+    <%= f.label :description, "Studio Description" %>
+    <br>
+    <%= f.text_area :description %>
+    <br>
+    <br>
+    <%= f.label :picture, "Picture Link" %>
+    <br>
+    <%= f.text_field :picture %>
+    <br>
+    <br>
+    <%= f.submit %>
+<% end %>

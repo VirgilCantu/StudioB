@@ -1,0 +1,7 @@
+<h1>Current Studios on StudioB</h1>
+
+<% @users.each do |user| %>
+    <img src=<%=user.picture%> class="user_index">
+    <div><%= link_to user.stage_name, user %> - <%= user.location %></div>
+    <br>
+<% end %>
