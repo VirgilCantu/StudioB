@@ -5,8 +5,18 @@ class UsersController < ApplicationController
     end
 
     def create
-        raise params.inspect
-        @user = User.create(user_params)
+        @user = User.create(
+            name: params[:user][:name],
+            email: params[:user][:email],
+            password: params[:user][:password],
+            location: params[:user][:location],
+            bio: params[:user][:bio],
+            can_travel: params[:user][:can_travel],
+            picture: params[:user][:picture],
+            stage_name: params[:user][:stage_name]
+        )
+        @user.roles << Role.find(params[:user][:roles])
+
     end
 
     private
