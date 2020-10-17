@@ -15,8 +15,12 @@ class UsersController < ApplicationController
             picture: params[:user][:picture],
             stage_name: params[:user][:stage_name]
         )
-        @user.roles << Role.find(params[:user][:roles])
+        @user.roles << Role.find_by(id: params[:user][:roles])
 
+    end
+
+    def edit
+        @user = User.find_by(id: params[:id])
     end
 
     private

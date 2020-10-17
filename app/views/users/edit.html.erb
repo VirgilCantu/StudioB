@@ -1,0 +1,51 @@
+<h1>Edit Your StudioB Profile</h1>
+
+<%= form_for @user do |f| %>
+    <%= f.label :name %>
+    <br>
+    <%= f.text_field :name %>
+    <br>
+    <br>
+    <%= f.label :email %>
+    <br>
+    <%= f.text_field :email %>
+    <br>
+    <br>
+    <%= f.label :password %>
+    <br>
+    <%= f.text_field :password %>
+    <br>
+    <br>
+    <%= f.label :location, "Current Location" %>
+    <br>
+    <%= f.text_field :location %>
+    <br>
+    <br>
+    <%= f.label :bio, "Let Us Know About Yourself:"%>
+    <br>
+    <%= f.text_area :bio %>
+    <br>
+    <br>
+    <%= f.label :can_travel, "Are You Willing to Travel?" %>
+    <%= f.check_box :can_travel %>
+    <br>
+    <br>
+    <%= f.label :picture, "Picture Link" %>
+    <br>
+    <%= f.text_field :picture %>
+    <br>
+    <br>
+    <%= f.label :stage_name, "Stage/Performance Name" %>
+    <br>
+    <br>
+    <%= f.text_field :stage_name %>
+    <br>
+    <br>
+    <%= f.label :roles, "What Do You Do?"%>
+    <br>
+    <br>
+    <%= f.collection_check_boxes :roles, Role.all, :id, :name, include_hidden: false %>
+    <br>
+    <br>
+    <%= f.submit %>
+<% end %>
