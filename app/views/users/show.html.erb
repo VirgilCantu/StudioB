@@ -31,3 +31,15 @@
         <br>
     <% end %>
 </ul>
+
+<% if @user.instruments.any? %>
+    <h3>Current Instruments</h3>
+        <% @user.instruments.each do |inst| %>
+            <ul>
+                <li><h4><%= inst.name %></h4></li>
+                Brand: <%= inst.brand %><br>
+                Category: <%= inst.category %><br>
+                Type: <%= inst.inst_type %><br>
+            </ul>
+        <% end %>  
+<% end %>
