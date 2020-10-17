@@ -127,7 +127,7 @@ timbaland = User.create(
     password: "timbaland", 
     location: "Miami, Florida",
     can_travel: false, 
-    picture: "https://upload.wikimedia.org/wikipedia/commons/5/5a/Timbaland1292010.jpg",
+    picture: "https://www.gstatic.com/tv/thumb/persons/431878/431878_v9_bb.jpg",
     stage_name: "Timbaland" )
 
 timbaland.roles << [producer, artist] 
