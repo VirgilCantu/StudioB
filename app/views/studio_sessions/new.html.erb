@@ -1,0 +1,32 @@
+<h1>Create a New Studio Session</h1>
+
+<%= form_for @studio_session do |f| %>
+    <%= f.label :session_time, "Requested Session Time" %>
+    <br>
+    <br>
+    <%= f.datetime_select :session_time %>
+    <br>
+    <br>
+    <%= f.label :duration %>
+    <br>
+    <br>
+    <%= f.number_field :duration %>
+    <br>
+    <br>
+    <%= f.label :special_req, "Special Requests for This Session" %>
+    <br>
+    <br>
+    <%= f.text_field :special_req %>
+    <br>
+    <br>
+    <%= f.label :cost, "Session Cost" %>
+    <br>
+    <br>
+    <%= f.label :studio %>
+    <br>
+    <br>
+    <%= f.collection_select :studio_id, Studio.all, :id, :name %>
+    <br>
+    <br>
+    <%= f.submit "Create Studio Session"%>
+<% end %>
