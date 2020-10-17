@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   has_secure_password
   
+  has_many :instruments
   has_many :user_genres
   has_many :genres, through: :user_genres
   has_many :user_roles
