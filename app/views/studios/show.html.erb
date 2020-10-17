@@ -8,4 +8,10 @@
     <li><p>Hourly Rate: $<%= @studio.hourly_rate %> USD</p></li>
     <li><p>Features: <%= @studio.features %></p></li>
     <li><p>Description: <%= @studio.description %></p></li>
+    <li><p>Featured Equipment: </p></li>
+        <% @studio.equipments.each do |eq| %>
+            <h4><%= eq.name %></h4>
+            <p>Brand: <%= eq.brand %></p>
+            <p>Category: <%= eq.category %></p>
+        <% end %>
 </ul>
