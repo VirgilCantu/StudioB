@@ -5,18 +5,7 @@ class UsersController < ApplicationController
     end
 
     def create
-        @user = User.create(
-            name: params[:user][:name],
-            email: params[:user][:email],
-            password: params[:user][:password],
-            location: params[:user][:location],
-            bio: params[:user][:bio],
-            can_travel: params[:user][:can_travel],
-            picture: params[:user][:picture],
-            stage_name: params[:user][:stage_name]
-        )
-        @user.roles << Role.find_by(id: params[:user][:roles])
-
+        @user = User.create(user_params)
     end
 
     def edit
@@ -35,7 +24,7 @@ class UsersController < ApplicationController
             :can_travel,
             :picture,
             :stage_name,
-            roles: []
+            role_ids: []
         )
     end
 

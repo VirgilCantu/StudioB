@@ -9,4 +9,5 @@ class User < ApplicationRecord
   has_many :user_sessions
   has_many :studio_sessions, through: :user_sessions
   has_many :studios, through: :studio_sessions
+
 end
