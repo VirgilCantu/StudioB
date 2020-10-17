@@ -301,3 +301,34 @@ wiseloord.equipments.create(
     category: "Recording Console",
 )
 
+#----------------------Studio Sessions--------------------# 
+
+session1 = StudioSession.create(
+    session_time: "2020-10-20 12:30:00",
+    duration: 8,
+    special_req: "Coconut water in the fridge, A/C at 78 degrees",
+)
+
+session2 = StudioSession.create(
+    session_time: "2020-11-05 18:00:00",
+    duration: 4,
+    special_req: "Blankets in recording studio",
+)
+
+session3 = StudioSession.create(
+    session_time: "2020-11-17 21:00:00",
+    duration: 3,
+    special_req: "Fridge full of Blue Moon",
+)
+
+session4 = StudioSession.create(
+    session_time: "2020-12-03 9:00:00",
+    duration: 5,
+    special_req: "Vegetable and fruit tray for snacking",
+)
+
+session5 = StudioSession.create(
+    session_time: "2020-12-08 16:00:00",
+    duration: 6,
+    special_req: "Catering from Chipotle",
+)
