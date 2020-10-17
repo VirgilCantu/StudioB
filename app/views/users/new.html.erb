@@ -41,5 +41,11 @@
     <%= f.text_field :stage_name %>
     <br>
     <br>
+    <%= f.label :roles, "What Do You Do?"%>
+    <br>
+    <br>
+    <%= f.collection_check_boxes :roles, Role.all, :id, :name, include_hidden: false %>
+    <br>
+    <br>
     <%= f.submit %>
 <% end %>

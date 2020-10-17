@@ -5,6 +5,7 @@ class UsersController < ApplicationController
     end
 
     def create
+        raise params.inspect
         @user = User.create(user_params)
     end
 
@@ -19,8 +20,9 @@ class UsersController < ApplicationController
             :bio,
             :can_travel,
             :picture,
-            :stage_name
+            :stage_name,
+            roles: []
         )
     end
-    
+
 end
