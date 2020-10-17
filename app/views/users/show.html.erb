@@ -1,5 +1,6 @@
-<h1>Welcome, <%= @user.stage_name %></h1>
+<img src=<%=@user.picture%> class="user">
 
+<h1>Welcome, <%=@user.stage_name%></h1> 
 
 <h3>Personal Information</h3>
 <ul>
@@ -7,13 +8,17 @@
     <li><p>Email: <%= @user.email %></p></li>
     <li><p>Current Location: <%= @user.location %></p></li>
     <li><p>Bio: <%= @user.bio %></p></li>
-    <li><p>Willing to Travel?:
-    <%= if @user.can_travel %></p></li>
+    <% if @user.can_travel %>
+    <li><p>Willing to Travel?: Yes</p></li>
+    <% else %>
+    <li><p>Willing to Travel?: No</p></li>
+    <% end %>
 </ul>
 
 <h3>Your Current Professional Roles</h3>
 <ul>
     <% @user.roles.each do |role| %>
         <li><%= role.name %></li>
+        <br>
     <% end %>
 </ul>
