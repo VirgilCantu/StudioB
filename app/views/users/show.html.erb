@@ -15,7 +15,16 @@
     <% end %>
 </ul>
 
-<h3>Your Current Professional Roles</h3>
+<h3>Preferred Musical Genres</h3>
+    <ul>
+        <% @user.genres.each do |genre| %>
+            <li><%= genre.name %></li>
+            <br>
+        <% end %>
+    </ul>
+
+
+<h3>Current Professional Roles</h3>
 <ul>
     <% @user.roles.each do |role| %>
         <li><%= role.name %></li>
