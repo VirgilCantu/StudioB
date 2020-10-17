@@ -1,0 +1,19 @@
+<h1>Welcome, <%= @user.stage_name %></h1>
+
+
+<h3>Personal Information</h3>
+<ul>
+    <li><p>Full Name: <%= @user.name %></p></li>
+    <li><p>Email: <%= @user.email %></p></li>
+    <li><p>Current Location: <%= @user.location %></p></li>
+    <li><p>Bio: <%= @user.bio %></p></li>
+    <li><p>Willing to Travel?:
+    <%= if @user.can_travel %></p></li>
+</ul>
+
+<h3>Your Current Professional Roles</h3>
+<ul>
+    <% @user.roles.each do |role| %>
+        <li><%= role.name %></li>
+    <% end %>
+</ul>
