@@ -1,24 +1,11 @@
-<img src=<%=@user.picture%> class="user">
+<img src=<%=@studio.picture%> class="studio">
 
-<h1>Welcome, <%=@user.stage_name%></h1> 
+<h1><%=@studio.name%></h1> 
 
-<h3>Personal Information</h3>
+<h3>Studio Information</h3>
 <ul>
-    <li><p>Full Name: <%= @user.name %></p></li>
-    <li><p>Email: <%= @user.email %></p></li>
-    <li><p>Current Location: <%= @user.location %></p></li>
-    <li><p>Bio: <%= @user.bio %></p></li>
-    <% if @user.can_travel %>
-    <li><p>Willing to Travel?: Yes</p></li>
-    <% else %>
-    <li><p>Willing to Travel?: No</p></li>
-    <% end %>
-</ul>
-
-<h3>Your Current Professional Roles</h3>
-<ul>
-    <% @user.roles.each do |role| %>
-        <li><%= role.name %></li>
-        <br>
-    <% end %>
+    <li><p>Location: <%= @studio.location %></p></li>
+    <li><p>Hourly Rate: $<%= @studio.hourly_rate %> USD</p></li>
+    <li><p>Features: <%= @studio.features %></p></li>
+    <li><p>Description: <%= @studio.description %></p></li>
 </ul>
