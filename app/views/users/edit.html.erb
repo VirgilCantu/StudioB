@@ -44,7 +44,7 @@
     <%= f.label :roles, "What Do You Do?"%>
     <br>
     <br>
-    <%= f.collection_check_boxes :roles, Role.all, :id, :name, include_hidden: false %>
+    <%= f.collection_check_boxes :role_ids, Role.all, :id, :name %>
     <br>
     <br>
     <%= f.submit %>
