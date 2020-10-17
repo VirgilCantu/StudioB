@@ -10,7 +10,7 @@
 
 country = Genre.create(name: "Country") 
 dance = Genre.create(name: "Dance") 
-hip-hop = Genre.create(name: "Hip-Hop") 
+hip_hop = Genre.create(name: "Hip-Hop") 
 jazz = Genre.create(name: "Jazz") 
 metal = Genre.create(name: "Metal") 
 pop = Genre.create(name: "Pop") 
@@ -57,7 +57,7 @@ post_malone = User.create(
     stage_name: "Post Malone" )
 
 post_malone.roles << artist
-post_malone.genres << hip-hop
+post_malone.genres << hip_hop
 
 lizzo = User.create(
     name: "Melissa Viviane Jefferson", 
@@ -69,7 +69,7 @@ lizzo = User.create(
     stage_name: "Lizzo" )
 
 lizzo.roles << artist
-lizzo.genres << hip-hop
+lizzo.genres << hip_hop
 
 harry_styles = User.create(
     name: "Harry Edward Styles", 
@@ -93,7 +93,7 @@ drake = User.create(
     stage_name: "Drake" )
 
 drake.roles << artist
-drake.genres << hip-hop
+drake.genres << hip_hop
 
 #----------------------Producers--------------------#    
 
@@ -107,7 +107,7 @@ rick_rubin = User.create(
     stage_name: "Rick Rubin" )
 
 rick_rubin.roles << producer
-rick_rubin.genres << hip-hop, metal, alternative, rock
+rick_rubin.genres << [hip_hop, metal, alternative, rock]
 
 dj_khaled = User.create(
     name: "Khaled Mohamed Khaled", 
@@ -118,8 +118,8 @@ dj_khaled = User.create(
     picture: "https://upload.wikimedia.org/wikipedia/commons/a/af/DJ_Khaled_2012.jpg",
     stage_name: "DJ Khaled" )
 
-dj_khaled.roles << producer, artist
-dj_khaled.genres << hip-hop, reggae, rb
+dj_khaled.roles << [producer, artist]
+dj_khaled.genres << [hip_hop, reggae, rb]
 
 timbaland = User.create(
     name: "Timothy Zachary Mosley", 
@@ -130,8 +130,8 @@ timbaland = User.create(
     picture: "https://upload.wikimedia.org/wikipedia/commons/5/5a/Timbaland1292010.jpg",
     stage_name: "Timbaland" )
 
-timbaland.roles << producer, artist 
-timbaland.genres << hip-hop, pop, rb
+timbaland.roles << [producer, artist] 
+timbaland.genres << [hip_hop, pop, rb]
 
 
 trent_reznor = User.create(
@@ -143,8 +143,8 @@ trent_reznor = User.create(
     picture: "https://upload.wikimedia.org/wikipedia/commons/c/c9/Trent_Reznor-FEB2008_%28cropped%2C_but_higher_quality%29_%282%29.jpg",
     stage_name: "Trent Reznor" )
 
-trent_reznor.roles << producer, artist
-trent_reznor.genres << alternative, metal, rock
+trent_reznor.roles << [producer, artist]
+trent_reznor.genres << [alternative, metal, rock]
 
 benny_blanco = User.create(
     name: "Benjamin Joseph Levin", 
@@ -156,7 +156,7 @@ benny_blanco = User.create(
     stage_name: "Benny Blanco" )
 
 benny_blanco.roles << producer
-benny_blanco.genres << hip-hop, pop
+benny_blanco.genres << [hip_hop, pop]
 
 #----------------------Musicians--------------------#  
 
@@ -170,8 +170,7 @@ earl_palmer = User.create(
     stage_name: "Earl Palmer" )
 
 earl_palmer.roles << musician
-earl_palmer.genres << jazz, soul, rock, funk
-
+earl_palmer.genres << [jazz, soul, rock, funk]
 gene_cipriano = User.create(
     name: "Eugene Cipriano", 
     email: "eugene@genecipriano.com", 
@@ -182,7 +181,7 @@ gene_cipriano = User.create(
     stage_name: "Gene Cipriano" )
 
 gene_cipriano.roles << musician
-gene_cipriano.genres << jazz, soul, rock
+gene_cipriano.genres << [jazz, soul, rock]
 
 hal_blaine = User.create(
     name: "Harold Simon Belsky", 
@@ -194,7 +193,7 @@ hal_blaine = User.create(
     stage_name: "Hal Blaine" )
 
 hal_blaine.roles << musician
-hal_blaine.genres << jazz, soul, rock
+hal_blaine.genres << [jazz, soul, rock]
 
 carol_kaye = User.create(
     name: "Carol Kaye", 
@@ -206,7 +205,7 @@ carol_kaye = User.create(
     stage_name: "Carol Kaye" )
 
 carol_kaye.roles << musician
-carol_kaye.genres << jazz, soul, rock, pop
+carol_kaye.genres << [jazz, soul, rock, pop]
 
 billy_preston = User.create(
     name: "William Everett Preston", 
@@ -218,14 +217,14 @@ billy_preston = User.create(
     stage_name: "Billy Preston" )
 
 billy_preston.roles << musician
-billy_preston.genres << jazz, soul, rb, funk  
+billy_preston.genres << [jazz, soul, rb, funk]  
 #----------------------Instruments + Assoc.--------------------# 
 
-earl_palmer.instruments.create(name: "Legacy Maple", brand: "Ludwig", category: "Percussion", inst_type: "Drum Kit", ) #Earl Palmer
-gene_cipriano.instruments.create(name: "Selmer Paris 52JM Alto", brand: "Conn-Selmer", category: "Brass", inst_type: "Saxophone", ) #Gene Cipriano
-hal_blaine.instruments.create(name: "Fender Precision Bass", brand: "Fender", category: "String", inst_type: "Bass Guitar", ) #Carol Kaye
-carol_kaye.instruments.create(name: "Super Classic Blue Sparkle", brand: "Ludwig", category: "Percussion", inst_type: "Drum Kit", ) #Hal Blaine
-billy_preston.instruments.create(name: "Hammond B-3", brand: "Hammond Organ Company", category: "Keyboard", inst_type: "Electric Organ", ) #Billy Preston
+earl_palmer.instrument.create(name: "Legacy Maple", brand: "Ludwig", category: "Percussion", inst_type: "Drum Kit", ) #Earl Palmer
+gene_cipriano.instrument.create(name: "Selmer Paris 52JM Alto", brand: "Conn-Selmer", category: "Brass", inst_type: "Saxophone", ) #Gene Cipriano
+hal_blaine.instrument.create(name: "Fender Precision Bass", brand: "Fender", category: "String", inst_type: "Bass Guitar", ) #Carol Kaye
+carol_kaye.instrument.create(name: "Super Classic Blue Sparkle", brand: "Ludwig", category: "Percussion", inst_type: "Drum Kit", ) #Hal Blaine
+billy_preston.instrument.create(name: "Hammond B-3", brand: "Hammond Organ Company", category: "Keyboard", inst_type: "Electric Organ", ) #Billy Preston
 
 #----------------------Studios--------------------# 
 
