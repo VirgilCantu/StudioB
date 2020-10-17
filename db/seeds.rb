@@ -333,17 +333,22 @@ session5 = StudioSession.create(
     special_req: "Catering from Chipotle",
 )
 
+session1.studio = capitol
 session1.cost = session1.duration * capitol.hourly_rate
 session1.save
 
+session2.studio = abbey_road
 session2.cost = session2.duration * abbey_road.hourly_rate
 session2.save
 
+session3.studio = electric_lady
 session3.cost = session3.duration * electric_lady.hourly_rate
 session3.save
 
+session4.studio = fame
 session4.cost = session4.duration * fame.hourly_rate
 session4.save
 
+session5.studio = wiseloord
 session5.cost = session5.duration * wiseloord.hourly_rate
 session5.save
