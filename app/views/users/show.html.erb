@@ -15,13 +15,15 @@
     <% end %>
 </ul>
 
-<h3>Preferred Musical Genres</h3>
-    <ul>
-        <% @user.genres.each do |genre| %>
-            <li><%= genre.name %></li>
-            <br>
-        <% end %>
-    </ul>
+<% if @user.roles.exclude?(Role.find(4)) %>
+    <h3>Preferred Musical Genres</h3>
+        <ul>
+            <% @user.genres.each do |genre| %>
+                <li><%= genre.name %></li>
+                <br>
+            <% end %>
+        </ul>
+<% end %>
 
 
 <h3>Current Professional Roles</h3>
