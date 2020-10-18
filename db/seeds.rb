@@ -351,3 +351,62 @@ session4.save
 session5.studio = wiseloord
 session5.cost = session5.duration * wiseloord.hourly_rate
 session5.save
+
+#----------------------Studio Manager Assoc.--------------------# 
+
+john_smith = User.create(
+    name: "John Smith", 
+    email: "john@capitol.com", 
+    password: "johnsmith", 
+    location: "Los Angeles, California",
+    can_travel: false, 
+    picture: "https://musicguy247.typepad.com/.a/6a01a3fcec1396970b022ad3791862200c-pi",
+)
+
+john_smith.roles << studio_manager
+capitol.studio_manager_id = john_smith.id
+
+emily_watkins = User.create(
+    name: "Emily Watkins", 
+    email: "emily@abbeyroad.com", 
+    password: "emilywatkins", 
+    location: "London, United Kingdom",
+    can_travel: false, 
+    picture: "https://musicguy247.typepad.com/.a/6a01a3fcec1396970b022ad3791862200c-pi"
+)   
+
+emily_watkins.roles << studio_manager
+abbey_road.studio_manager_id = emily_watkins.id
+
+abigail_hendrix = User.create(
+    name: "Abigail Hendrix", 
+    email: "abigail@electriclady.com", 
+    password: "abigailhendrix", 
+    location: "New York City, New York",
+    can_travel: false, 
+    picture: "https://musicguy247.typepad.com/.a/6a01a3fcec1396970b022ad3791862200c-pi"
+)
+
+abigail_hendrix.roles << studio_manager
+electric_lady.studio_manager_id = abigail_hendrix.id
+
+charles_jefferson = User.create(
+    name: "Charles Jefferson", 
+    email: "charles@fame.com", 
+    password: "charlesjefferson", 
+    location: "Muscle Shoals, Alabama",
+    can_travel: false, 
+    picture: "https://musicguy247.typepad.com/.a/6a01a3fcec1396970b022ad3791862200c-pi"
+)
+
+charles_jefferson.roles << studio_manager
+fame.studio_manager_id = charles_jefferson.id
+
+virgil_cantu = User.create(
+    name: "Virgil Cantu", 
+    email: "virgil@wiseloord.com", 
+    password: "virgilcantu", 
+    location: "Hilversum, Netherlands",
+
+virgil_cantu.roles << studio_manager
+wiseloord.studio_manager_id = virgil_cantu.id
