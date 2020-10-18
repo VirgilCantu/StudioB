@@ -14,6 +14,8 @@ class StudioSessionsController < ApplicationController
 
     def create
         @studio_session = StudioSession.create(studio_session_params)
+        @studio_session.cost = params[:studio_session][:duration].to_i*@studio_session.studio.hourly_rate
+        @studio_session.save
         redirect_to studio_session_path(@studio_session)
     end
 
@@ -35,8 +37,8 @@ class StudioSessionsController < ApplicationController
         :session_time,
         :duration,
         :special_req,
-        :cost,
         :studio_id
         )
     end
+    
 end
