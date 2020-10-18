@@ -25,5 +25,11 @@
     <%= f.collection_select :studio_id, Studio.all.sort_by {|studio| studio.name}, :id, :name %>
     <br>
     <br>
+    <%= f.label :users %>
+    <br>
+    <br>
+    <%= f.collection_check_boxes :user_ids, User.all.sort_by {|user| user.stage_name}, :id, :name %>
+    <br>
+    <br>
     <%= f.submit "Create Studio Session"%>
 <% end %>
