@@ -5,6 +5,9 @@
 <h3>Personal Information</h3>
 <ul>
     <li><p>Full Name: <%= @user.name %></p></li>
+    <% if @user.stage_name %>
+    <li><p>Stage Name: <%= @user.stage_name %></p></li>
+    <% end %>
     <li><p>Email: <%= @user.email %></p></li>
     <li><p>Current Location: <%= @user.location %></p></li>
     <li><p>Bio: <%= @user.bio %></p></li>
