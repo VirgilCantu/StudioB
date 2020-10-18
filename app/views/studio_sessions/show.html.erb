@@ -1,0 +1,16 @@
+<h1>Studio Session <%= @studio_session.id %></h1>
+<h3>Location: <%= @studio_session.studio.name %></h3>
+<h3>Scheduled for: <%= @studio_session.session_time.strftime("%A, %B %e at %l:%M %p") %></h3>
+<h3>Duration: <%= @studio_session.duration %> hours</h3>
+<h3>Attendees: </h3>
+<% @studio_session.users.each do |user| %>
+    <ul>
+        <li><%= link_to user.name, user %></li>
+            <ul>
+
+            </ul>
+    </ul>
+<% end %>
+
+
+
