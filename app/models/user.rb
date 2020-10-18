@@ -10,4 +10,6 @@ class User < ApplicationRecord
   has_many :studio_sessions, through: :user_sessions
   has_many :studios, through: :studio_sessions
 
+  scope :managers, -> { joins(:roles).where('roles.name = "Studio Manager"') }
+  scope :not_managers, -> { joins(:roles).where('roles.name != "Studio Manager"') }
 end

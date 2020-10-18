@@ -28,7 +28,7 @@
     <%= f.label :users, "Select Artists, Musicians or Producers For This Session" %>
     <br>
     <br>
-    <%= f.collection_select :user_ids, User.all.sort_by {|user| user.stage_name}, :id, :stage_name, {}, {multiple: true} %>
+    <%= f.collection_select :user_ids, User.all.sort_by {|user| user.name}, :id, :name, {}, {multiple: true} %>
     <br>
     <br>
     <%= f.submit "Create Studio Session"%>
