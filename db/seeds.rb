@@ -365,6 +365,7 @@ john_smith = User.create(
 
 john_smith.roles << studio_manager
 capitol.studio_manager_id = john_smith.id
+capitol.save
 
 emily_watkins = User.create(
     name: "Emily Watkins", 
@@ -377,6 +378,7 @@ emily_watkins = User.create(
 
 emily_watkins.roles << studio_manager
 abbey_road.studio_manager_id = emily_watkins.id
+abbey_road.save
 
 abigail_hendrix = User.create(
     name: "Abigail Hendrix", 
@@ -389,6 +391,7 @@ abigail_hendrix = User.create(
 
 abigail_hendrix.roles << studio_manager
 electric_lady.studio_manager_id = abigail_hendrix.id
+electric_lady.save
 
 charles_jefferson = User.create(
     name: "Charles Jefferson", 
@@ -401,6 +404,7 @@ charles_jefferson = User.create(
 
 charles_jefferson.roles << studio_manager
 fame.studio_manager_id = charles_jefferson.id
+fame.save
 
 virgil_cantu = User.create(
     name: "Virgil Cantu", 
@@ -412,3 +416,4 @@ virgil_cantu = User.create(
 )
 virgil_cantu.roles << studio_manager
 wiseloord.studio_manager_id = virgil_cantu.id
+wiseloord
