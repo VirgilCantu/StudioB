@@ -11,5 +11,5 @@ class User < ApplicationRecord
   has_many :studios, through: :studio_sessions
 
   scope :managers, -> { joins(:roles).where('roles.name = "Studio Manager"').order(name: :asc) }
-  scope :not_managers, -> { joins(:roles).where('roles.name != "Studio Manager"').order(name: :asc) }
+  scope :not_managers, -> { joins(:roles).where('roles.name != "Studio Manager"').distinct.order(name: :asc) }
 end
