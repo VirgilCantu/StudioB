@@ -360,7 +360,7 @@ john_smith = User.create(
     password: "johnsmith", 
     location: "Los Angeles, California",
     can_travel: false, 
-    picture: "https://musicguy247.typepad.com/.a/6a01a3fcec1396970b022ad3791862200c-pi",
+    picture: "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/35af6a41332353.57a1ce913e889.jpg",
 )
 
 john_smith.roles << studio_manager
@@ -372,7 +372,7 @@ emily_watkins = User.create(
     password: "emilywatkins", 
     location: "London, United Kingdom",
     can_travel: false, 
-    picture: "https://musicguy247.typepad.com/.a/6a01a3fcec1396970b022ad3791862200c-pi"
+    picture: "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/937b3c41332353.57a1ce913f308.jpg"
 )   
 
 emily_watkins.roles << studio_manager
@@ -384,7 +384,7 @@ abigail_hendrix = User.create(
     password: "abigailhendrix", 
     location: "New York City, New York",
     can_travel: false, 
-    picture: "https://musicguy247.typepad.com/.a/6a01a3fcec1396970b022ad3791862200c-pi"
+    picture: "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/993a9141332353.57a1ce913ee47.jpg"
 )
 
 abigail_hendrix.roles << studio_manager
@@ -396,7 +396,7 @@ charles_jefferson = User.create(
     password: "charlesjefferson", 
     location: "Muscle Shoals, Alabama",
     can_travel: false, 
-    picture: "https://musicguy247.typepad.com/.a/6a01a3fcec1396970b022ad3791862200c-pi"
+    picture: "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/c6b9cf41332353.57a1ce9140c92.jpg"
 )
 
 charles_jefferson.roles << studio_manager
@@ -407,6 +407,8 @@ virgil_cantu = User.create(
     email: "virgil@wiseloord.com", 
     password: "virgilcantu", 
     location: "Hilversum, Netherlands",
-
+    can_travel: false, 
+    picture: "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/799ee441332353.57a1ce913f973.jpg"
+)
 virgil_cantu.roles << studio_manager
 wiseloord.studio_manager_id = virgil_cantu.id
