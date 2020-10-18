@@ -38,7 +38,7 @@ class StudioSessionsController < ApplicationController
         :duration,
         :special_req,
         :studio_id,
-        :user_ids
+        user_ids:[]
         )
     end
     
