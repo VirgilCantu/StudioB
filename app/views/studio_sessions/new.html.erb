@@ -1,35 +1,3 @@
 <h1>Create a New Studio Session</h1>
 
-<%= form_for @studio_session do |f| %>
-    <%= f.label :session_time, "Requested Session Time" %>
-    <br>
-    <br>
-    <%= f.datetime_select :session_time %>
-    <br>
-    <br>
-    <%= f.label :duration, "Requested Duration (Hours)" %>
-    <br>
-    <br>
-    <%= f.number_field :duration %>
-    <br>
-    <br>
-    <%= f.label :special_req, "Special Requests for This Session" %>
-    <br>
-    <br>
-    <%= f.text_area :special_req %>
-    <br>
-    <br>
-    <%= f.label :studio %>
-    <br>
-    <br>
-    <%= f.collection_select :studio_id, Studio.all.sort_by {|studio| studio.name}, :id, :name %>
-    <br>
-    <br>
-    <%= f.label :users, "Select Artists, Musicians or Producers For This Session" %>
-    <br>
-    <br>
-    <%= f.collection_select :user_ids, User.not_managers, :id, :name, {}, {multiple: true} %>
-    <br>
-    <br>
-    <%= f.submit "Create Studio Session"%>
-<% end %>
+<%= render 'form' %>
