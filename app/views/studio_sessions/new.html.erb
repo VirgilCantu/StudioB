@@ -7,7 +7,7 @@
     <%= f.datetime_select :session_time %>
     <br>
     <br>
-    <%= f.label :duration %>
+    <%= f.label :duration, "Requested Duration (Hours)" %>
     <br>
     <br>
     <%= f.number_field :duration %>
@@ -16,16 +16,13 @@
     <%= f.label :special_req, "Special Requests for This Session" %>
     <br>
     <br>
-    <%= f.text_field :special_req %>
-    <br>
-    <br>
-    <%= f.label :cost, "Session Cost" %>
+    <%= f.text_area :special_req %>
     <br>
     <br>
     <%= f.label :studio %>
     <br>
     <br>
-    <%= f.collection_select :studio_id, Studio.all, :id, :name %>
+    <%= f.collection_select :studio_id, Studio.all.sort_by {|studio| studio.name}, :id, :name %>
     <br>
     <br>
     <%= f.submit "Create Studio Session"%>
