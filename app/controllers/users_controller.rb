@@ -5,7 +5,7 @@ class UsersController < ApplicationController
     end
 
     def index
-        @users = User.all.sort_by {|user| user.stage_name}
+        @users = User.all.sort_by {|user| user.name}
     end
     
     def new
