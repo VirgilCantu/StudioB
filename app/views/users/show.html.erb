@@ -53,3 +53,7 @@
             </ul>
         <% end %>  
 <% end %>
+
+<%= button_to "Edit User", edit_user_path(@user), method: "get" %>
+<br>
+<%= button_to "Delete User", @use, :method => :delete %>
