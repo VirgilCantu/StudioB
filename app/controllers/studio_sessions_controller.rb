@@ -29,6 +29,11 @@ class StudioSessionsController < ApplicationController
         redirect_to studio_session_path(@studio_session)
     end
 
+    def destroy
+        @studio_session = StudioSession.find(params[:id])
+        @studio_session.destroy
+        redirect_to studio_sessions_path
+    end
 
     private
 
