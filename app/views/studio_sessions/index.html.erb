@@ -1,0 +1,6 @@
+<h1>Current Studio Sessions on StudioB </h1>
+<% @studio_sessions.each do |studio_session| %>
+    <h3><%= link_to "Studio Session #{studio_session.id}" , studio_session %></h3>
+    <p>Session Time: <%= studio_session.session_time.strftime("%A, %B %e at %l:%M %p")  %></p>
+    <p>Location: <%= link_to studio_session.studio.name, studio_session.studio %></p>
+<% end %>
