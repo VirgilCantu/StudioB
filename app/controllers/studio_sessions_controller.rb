@@ -31,6 +31,7 @@ class StudioSessionsController < ApplicationController
 
     def destroy
         @studio_session = StudioSession.find(params[:id])
+        @studio_session.user_sessions.destroy_all
         @studio_session.destroy
         redirect_to studio_sessions_path
     end
