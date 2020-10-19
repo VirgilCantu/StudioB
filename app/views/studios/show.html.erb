@@ -15,3 +15,7 @@
             <p>Category: <%= eq.category %></p>
         <% end %>
 </ul>
+
+<%= button_to "Edit Studio", edit_studio_path(@studio), method: "get" %>
+<br>
+<%= button_to "Delete Studio", @studio, :method => :delete %>
