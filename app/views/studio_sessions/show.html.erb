@@ -1,24 +1,33 @@
 <h1>Studio Session <%= @studio_session.id %></h1>
+
 <h3>Date Created</h3>
  <%= @studio_session.created_at.strftime("%A, %B %e at %l:%M %p") %>
+
 <h3>Last Updated</h3>
  <%= @studio_session.updated_at.strftime("%A, %B %e at %l:%M %p") %>
+
 <h3>Location</h3>
  <%= link_to @studio_session.studio.name, @studio_session.studio %>
+
 <h3>Scheduled At</h3>
  <%= @studio_session.session_time.strftime("%A, %B %e at %l:%M %p") %>
+
 <h3>Duration</h3>
  <%= @studio_session.duration %> hours
+
  <h3>Special Requests</h3>
  <%= @studio_session.special_req %>
+
  <h3>Session Cost</h3>
  <%= @studio_session.cost %>
+
 <h3>Attendees: </h3>
 <% @studio_session.users.each do |user| %>
     <ul>
         <li><%= link_to user.name, user %></li>
     </ul>
 <% end %>
+<br>
 
 
-
+<%= button_to "Edit Session", edit_studio_session_path(@studio_session), method: "get" %>
