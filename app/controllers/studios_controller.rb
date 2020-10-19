@@ -27,6 +27,12 @@ class StudiosController < ApplicationController
         redirect_to studio_path(@studio)
     end
 
+    def destroy
+        @studio = Studio.find_by(id: params[:id])
+        @studio.destroy
+        redirect_to studios_path
+    end
+
 
     private
 
