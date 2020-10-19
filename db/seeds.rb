@@ -171,6 +171,7 @@ earl_palmer = User.create(
 
 earl_palmer.roles << musician
 earl_palmer.genres << [jazz, soul, rock, funk]
+
 gene_cipriano = User.create(
     name: "Eugene Cipriano", 
     email: "eugene@genecipriano.com", 
@@ -334,22 +335,27 @@ session5 = StudioSession.create(
 
 session1.studio = capitol
 session1.cost = session1.duration * capitol.hourly_rate
+session1.users << [billie_eilish, rick_rubin, earl_palmer] 
 session1.save
 
 session2.studio = abbey_road
 session2.cost = session2.duration * abbey_road.hourly_rate
+session2.users << [post_malone, dj_khaled, gene_cipriano]
 session2.save
 
 session3.studio = electric_lady
 session3.cost = session3.duration * electric_lady.hourly_rate
+session3.users << [lizzo, timbaland, hal_blaine]
 session3.save
 
 session4.studio = fame
 session4.cost = session4.duration * fame.hourly_rate
+session4.users << [harry_styles, trent_reznor, carol_kaye]
 session4.save
 
 session5.studio = wiseloord
 session5.cost = session5.duration * wiseloord.hourly_rate
+session5.users << [drake, benny_blanco, billy_preston] 
 session5.save
 
 #----------------------Studio Manager Assoc.--------------------# 
