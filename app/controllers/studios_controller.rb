@@ -1,6 +1,6 @@
 class StudiosController < ApplicationController
     
-    before_action :set_studio, only: [:show, :edit, :update]
+    before_action :set_studio, only: [:show, :edit, :update, :destroy]
 
     def show
     end
@@ -35,8 +35,6 @@ class StudiosController < ApplicationController
     end
 
     def destroy
-        @studio = Studio.find_by(id: params[:id])
-        
         @studio.equipments.destroy_all
 
         @studio.studio_sessions.each do |ss|
@@ -45,7 +43,7 @@ class StudiosController < ApplicationController
             end
        end
 
-       @studio.studio_sessions.destroy_all
+        @studio.studio_sessions.destroy_all
 
         @studio.destroy
 
