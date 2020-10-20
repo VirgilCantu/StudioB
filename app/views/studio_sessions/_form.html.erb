@@ -17,13 +17,13 @@
     <%= f.text_area :special_req %>
     <br>
     <br>
-    <%= f.label :studio %>
+    <%= f.label :studio_id %>
     <br>
     <br>
     <%= f.collection_select :studio_id, Studio.all.sort_by {|studio| studio.name}, :id, :name %>
     <br>
     <br>
-    <%= f.label :users, "Select Artists, Musicians or Producers For This Session" %>
+    <%= f.label :user_ids, "Select Artists, Musicians or Producers For This Session" %>
     <br>
     <br>
     <%= f.collection_select :user_ids, User.not_managers, :id, :name, {}, {multiple: true} %>

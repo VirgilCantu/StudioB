@@ -55,7 +55,8 @@ class UsersController < ApplicationController
             :can_travel,
             :picture,
             :stage_name,
-            role_ids: []
+            role_ids: [],
+            genre_ids: []
         )
     end
 

@@ -44,10 +44,16 @@
     <%= f.text_field :stage_name %>
     <br>
     <br>
-    <%= f.label :roles, "What Do You Do?"%>
+    <%= f.label :role_ids, "What Do You Do?"%>
     <br>
     <br>
     <%= f.collection_check_boxes :role_ids, Role.all, :id, :name %>
+    <br>
+    <br>
+    <%= f.label :genre_ids, "What Genres Do You Associate Yourself With?"%>
+    <br>
+    <br>
+    <%= f.collection_select :genre_ids, Genre.all, :id, :name, {}, {multiple: true} %>
     <br>
     <br>
     <%= f.submit %>
