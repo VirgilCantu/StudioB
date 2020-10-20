@@ -1,7 +1,8 @@
 class StudiosController < ApplicationController
+    
+    before_action :set_studio, only: [:show, :edit, :update]
 
     def show
-        @studio = Studio.find_by(id: params[:id])
     end
 
     def index
@@ -23,12 +24,9 @@ class StudiosController < ApplicationController
     end
 
     def edit
-        @studio = Studio.find_by(id: params[:id])
     end
 
     def update
-        @studio = Studio.find_by(id: params[:id])
-
         if @studio.update(studio_params)
             redirect_to studio_path(@studio)
         else
@@ -67,4 +65,8 @@ class StudiosController < ApplicationController
         :picture
         )
     end
+
+    def set_studio
+        @studio = Studio.find_by(id: params[:id])
+      end
 end
