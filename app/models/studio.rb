@@ -9,5 +9,6 @@ class Studio < ApplicationRecord
     validates :location, presence: true
     validates :hourly_rate, presence: true
     validates :hourly_rate, numericality: { greater_than_or_equal_to: 100 }
+    validates :picture, presence: true
 
 end
