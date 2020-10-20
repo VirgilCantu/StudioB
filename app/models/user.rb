@@ -13,6 +13,7 @@ class User < ApplicationRecord
   validates :name, presence: true, uniqueness: true
   validates :email, presence: true, uniqueness: true
   validates :location, presence: true
+  validates :picture, presence: true
 
   
   scope :managers, -> { joins(:roles).where('roles.name = "Studio Manager"').order(name: :asc) }
