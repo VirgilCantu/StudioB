@@ -1,7 +1,8 @@
 class StudioSessionsController < ApplicationController
 
+    before_action :set_studio, only: [:show, :edit, :update, :destroy]
+
     def show
-        @studio_session = StudioSession.find_by(id: params[:id])
     end
 
     def index
@@ -24,11 +25,9 @@ class StudioSessionsController < ApplicationController
     end
 
     def edit
-        @studio_session = StudioSession.find_by(id: params[:id])
     end
 
     def update
-        @studio_session = StudioSession.find_by(id: params[:id])
         @studio_session.cost = params[:studio_session][:duration].to_i*@studio_session.studio.hourly_rate
 
         if @studio_session.update(studio_session_params)
@@ -39,7 +38,6 @@ class StudioSessionsController < ApplicationController
     end
 
     def destroy
-        @studio_session = StudioSession.find_by(id: params[:id])
         @studio_session.user_sessions.destroy_all
         @studio_session.destroy
         redirect_to studio_sessions_path
@@ -55,6 +53,10 @@ class StudioSessionsController < ApplicationController
         :studio_id,
         user_ids:[]
         )
+    end
+
+    def set_studio_session
+        @studio_session = StudioSession.find_by(id: params[:id])
     end
     
 end

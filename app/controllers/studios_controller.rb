@@ -66,5 +66,5 @@ class StudiosController < ApplicationController
 
     def set_studio
         @studio = Studio.find_by(id: params[:id])
-      end
+    end
 end
