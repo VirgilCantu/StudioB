@@ -29,8 +29,12 @@ class UsersController < ApplicationController
 
     def update
         @user = User.find_by(id: params[:id])
-        @user.update(user_params)
-        redirect_to user_path(@user)
+
+        if @user.update(user_params)
+            redirect_to user_path(@user)
+        else
+            render: edit
+        end
     end
 
     def destroy
@@ -57,6 +61,10 @@ class UsersController < ApplicationController
             :stage_name,
             role_ids: []
         )
+    end
+
+    def set_user
+        @user = User.find_by(id: params[:id])
     end
 
 end
