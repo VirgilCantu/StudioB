@@ -13,8 +13,13 @@ class StudiosController < ApplicationController
     end
 
     def create
-        @studio = Studio.create(studio_params)
-        redirect_to studio_path(@studio)
+        @studio = Studio.new(studio_params)
+
+        if @studio.save
+            redirect_to studio_path(@studio)
+        else
+            render :new
+        end
     end
 
     def edit
@@ -23,8 +28,12 @@ class StudiosController < ApplicationController
 
     def update
         @studio = Studio.find_by(id: params[:id])
-        @studio.update(studio_params)
-        redirect_to studio_path(@studio)
+
+        if @studio.update(studio_params)
+            redirect_to studio_path(@studio)
+        else
+            render :edit
+        end
     end
 
     def destroy
