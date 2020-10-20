@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
 
+    before_action :set_user, only: [:show, :edit, :update, :destroy]
+
     def show
-        @user = User.find_by(id: params[:id])
     end
 
     def index
@@ -16,7 +17,6 @@ class UsersController < ApplicationController
         @user = User.new(user_params)
 
         if @user.save
-
             redirect_to user_path(@user)
         else
             render :new
@@ -24,12 +24,9 @@ class UsersController < ApplicationController
     end
 
     def edit
-        @user = User.find_by(id: params[:id])
     end
 
     def update
-        @user = User.find_by(id: params[:id])
-
         if @user.update(user_params)
             redirect_to user_path(@user)
         else
@@ -38,7 +35,6 @@ class UsersController < ApplicationController
     end
 
     def destroy
-        @user = User.find_by(id: params[:id])
         @user.user_sessions.destroy_all
         @user.user_roles.destroy_all
         @user.user_genres.destroy_all
