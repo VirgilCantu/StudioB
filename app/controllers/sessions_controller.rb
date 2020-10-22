@@ -4,9 +4,9 @@ class SessionsController < ApplicationController
     end
 
     def create
-        user = User.find_by(name: params[:session[:name])
+        user = User.find_by(email: params[:session][:email])
         user = user.try(:authenticate, params[:session][:password])
-        
+        byebug
         return redirect_to login_path unless user
         
         session[:user_id] = user.id
