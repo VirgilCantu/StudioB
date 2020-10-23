@@ -7,7 +7,6 @@
 <% end %>
 
 <%= form_for(:session, url: login_path) do |f| %>
-
     <%= f.label :email %>
     <%= f.text_field :email %>
     <br>
@@ -17,5 +16,4 @@
     <br>
     <br>
     <%= f.submit "Log In" %>
-    
 <% end %>
