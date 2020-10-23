@@ -60,7 +60,8 @@ class StudiosController < ApplicationController
         :hourly_rate,
         :features,
         :description,
-        :picture
+        :picture,
+        :studio_manager_id
         )
     end
 

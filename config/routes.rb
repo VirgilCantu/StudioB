@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'application#home'
 
   #A studio can only be created if your Roles include studio manager, and if they do, you can create studios only that belong to you, no one else.
+  
   #You can only create a StudioSession as a studio manager Role, and if you do create StudioSessions, only studios you manage will be available to select from.
 
   get '/login' , to: 'sessions#new'
