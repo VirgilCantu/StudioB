@@ -34,14 +34,15 @@
 
 
 <h3>Current Professional Roles</h3>
+
 <ul>
-    <% @user.roles.each do |role| %>
-        <% if role == Role.find(4)%>
-        <li><%= role.name %> - <%= link_to Studio.find_by(studio_manager_id: @user.id).name, Studio.find_by(studio_manager_id: @user.id)  %></li> 
-        <br>
+    <% @user.roles.each do |role| %> 
+        <% if role == Role.find(4) %>
+            <% Studio.where(studio_manager_id: @user.id).each do |studio| %>
+                <li>Studio Manager - <%= link_to studio.name, studio  %>
+            <% end %>
         <% else %>
-        <li><%= role.name %></li>
-        <br>
+            <li><%= role.name %></li>
         <% end %>
     <% end %>
 </ul>
