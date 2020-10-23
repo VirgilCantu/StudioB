@@ -40,7 +40,7 @@ class UsersController < ApplicationController
         @user.user_roles.destroy_all
         @user.user_genres.destroy_all
         @user.destroy
-        redirect_to users_path
+        redirect_to logout_path
     end
 
 
