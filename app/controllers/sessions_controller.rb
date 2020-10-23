@@ -6,7 +6,8 @@ class SessionsController < ApplicationController
     def create
         user = User.find_by(email: params[:session][:email])
         user = user.try(:authenticate, params[:session][:password])
-        return redirect_to login_path unless user
+
+        return redirect_to login_path, notice: "Invalid email/password combination" unless user
         
         session[:user_id] = user.id
 
@@ -17,7 +18,5 @@ class SessionsController < ApplicationController
         session.delete :user_id
         redirect_to root_path
     end
-
-    
 
 end

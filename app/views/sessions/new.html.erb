@@ -1,5 +1,11 @@
 <h1>Log In - StudioB</h1>
 
+<% if flash[:notice] %>
+    <%= flash[:notice] %>
+    <br>
+    <br>
+<% end %>
+
 <%= form_for(:session, url: login_path) do |f| %>
 
     <%= f.label :email %>
