@@ -422,4 +422,4 @@ virgil_cantu = User.create(
 )
 virgil_cantu.roles << studio_manager
 wiseloord.studio_manager_id = virgil_cantu.id
-wiseloord
+wiseloord.save

@@ -16,6 +16,8 @@
         <% end %>
 </ul>
 
+<% if current_user.id == @studio.studio_manager_id %>
 <%= button_to "Edit Studio", edit_studio_path(@studio), method: "get" %>
 <br>
 <%= button_to "Delete Studio", @studio, :method => :delete %>
+<% end %>
