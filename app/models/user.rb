@@ -16,7 +16,6 @@ class User < ApplicationRecord
   validates :picture, presence: true
   has_secure_password
   
-  
   scope :managers, -> { joins(:roles).where('roles.name = "Studio Manager"').order(name: :asc) }
   scope :not_managers, -> { joins(:roles).where('roles.name != "Studio Manager"').distinct.order(name: :asc) }
 end

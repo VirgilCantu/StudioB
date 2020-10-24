@@ -20,4 +20,6 @@
 <%= button_to "Edit Studio", edit_studio_path(@studio), method: "get" %>
 <br>
 <%= button_to "Delete Studio", @studio, :method => :delete %>
+<br>
+<%= button_to "Add Studio Session", new_studio_studio_session_path(@studio), method: "get" %>
 <% end %>

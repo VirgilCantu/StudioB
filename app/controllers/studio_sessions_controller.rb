@@ -1,6 +1,7 @@
 class StudioSessionsController < ApplicationController
 
     before_action :set_studio_session, only: [:show, :edit, :update, :destroy]
+    before_action :require_login
 
     def show
     end
@@ -14,7 +15,8 @@ class StudioSessionsController < ApplicationController
     end
     
     def new
-        @studio_session = StudioSession.new
+        @studio_session = StudioSession.new(studio_id: params[:studio_id])
+        @studios = Studio.where(studio_manager_id: current_user.id)
     end
 
     def create

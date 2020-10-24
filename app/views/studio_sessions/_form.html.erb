@@ -20,7 +20,7 @@
     <%= f.label :studio_id %>
     <br>
     <br>
-    <%= f.collection_select :studio_id, Studio.all.sort_by {|studio| studio.name}, :id, :name %>
+    <%= f.collection_select :studio_id, @studios, :id, :name %>
     <br>
     <br>
     <%= f.label :user_ids, "Select Artists, Musicians or Producers For This Session" %>
