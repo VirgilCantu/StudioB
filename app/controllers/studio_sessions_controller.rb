@@ -15,8 +15,12 @@ class StudioSessionsController < ApplicationController
     end
     
     def new
-        @studio_session = StudioSession.new(studio_id: params[:studio_id])
-        @studios = Studio.where(studio_manager_id: current_user.id)
+        if params[:studio_id]
+            @studio_session = StudioSession.new(studio_id: params[:studio_id])
+        else
+            @studio_session = StudioSession.new
+            @studios = Studio.where(studio_manager_id: current_user.id)
+        end
     end
 
     def create

@@ -1,5 +1,5 @@
 <%= form_for @studio_session do |f| %>
-    <%= f.hidden_field :studio_id %>
+    
     <%= f.label :session_time, "Requested Session Time" %>
     <br>
     <br>
@@ -24,5 +24,14 @@
     <%= f.collection_select :user_ids, User.not_managers, :id, :name, {}, {multiple: true} %>
     <br>
     <br>
+    <% if params[:studio_id] %>
+        <%= f.hidden_field :studio_id %>
+    <% else %>
+        <%= f.label :studio_id %>
+        <br>
+        <br>
+        <%= f.collection_select :studio_id, @studios, :id, :name %>
+    <% end %>
     <%= f.submit %>
 <% end %>
+
