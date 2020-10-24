@@ -6,7 +6,11 @@ class StudioSessionsController < ApplicationController
     end
 
     def index
-        @studio_sessions = StudioSession.all
+        if params[:studio_id]
+            @studio_sessions = Studio.find(params[:studio_id]).studio_sessions
+        else
+            @studio_sessions = StudioSession.all
+        end
     end
     
     def new
