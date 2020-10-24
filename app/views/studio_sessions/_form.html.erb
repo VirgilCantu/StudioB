@@ -1,4 +1,5 @@
 <%= form_for @studio_session do |f| %>
+    <%= f.hidden_field :studio_id %>
     <%= f.label :session_time, "Requested Session Time" %>
     <br>
     <br>
@@ -15,12 +16,6 @@
     <br>
     <br>
     <%= f.text_area :special_req %>
-    <br>
-    <br>
-    <%= f.label :studio_id %>
-    <br>
-    <br>
-    <%= f.collection_select :studio_id, @studios, :id, :name %>
     <br>
     <br>
     <%= f.label :user_ids, "Select Artists, Musicians or Producers For This Session" %>
