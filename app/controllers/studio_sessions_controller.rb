@@ -9,6 +9,8 @@ class StudioSessionsController < ApplicationController
     def index
         if params[:studio_id]
             @studio_sessions = Studio.find(params[:studio_id]).studio_sessions
+        elsif params[:user_id]
+            @studio_sessions = User.find(params[:user_id]).studio_sessions
         else
             @studio_sessions = StudioSession.all
         end
