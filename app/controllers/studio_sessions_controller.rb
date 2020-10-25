@@ -35,6 +35,7 @@ class StudioSessionsController < ApplicationController
     end
 
     def edit
+        @studios = Studio.where(studio_manager_id: current_user.id) unless params[:studio_id]
     end
 
     def update

@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get '/logout', to: 'sessions#destroy'
 
   resources :studios do
-    resources :studio_sessions, only: [:show, :index, :new]
+    resources :studio_sessions, only: [:show, :index, :new, :edit]
   end
 
   resources :studio_sessions
