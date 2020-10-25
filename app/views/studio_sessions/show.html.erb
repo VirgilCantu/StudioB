@@ -29,8 +29,8 @@
 <% end %>
 <br>
 
-
-<%= button_to "Edit Session", edit_studio_session_path(@studio_session), method: "get" %>
-<br>
-<%= button_to "Delete Session", @studio_session, :method => :delete %>
-
+<% if @studio_session.studio.studio_manager_id == current_user.id%>
+    <%= button_to "Edit Session", edit_studio_session_path(@studio_session), method: "get" %>
+    <br>
+    <%= button_to "Delete Session", @studio_session, :method => :delete %>
+<% end %>
