@@ -5,3 +5,8 @@
     <div><%= link_to user.name, user %> - <%= user.location %></div>
     <br>
 <% end %>
+
+<% if logged_in? %>
+<br>
+<%= button_to "Log Out", logout_path, method: "get" %>
+<% end %>
