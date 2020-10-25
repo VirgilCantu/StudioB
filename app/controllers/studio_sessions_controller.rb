@@ -2,6 +2,7 @@ class StudioSessionsController < ApplicationController
 
     before_action :set_studio_session, only: [:show, :edit, :update, :destroy]
     before_action :require_login
+    before_action :require_manager
 
     def show
     end

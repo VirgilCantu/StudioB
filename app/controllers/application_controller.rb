@@ -18,5 +18,9 @@ class ApplicationController < ActionController::Base
     def require_login
         redirect_to root_path unless session.include? :user_id
     end
+
+    def require_manager
+        redirect_to root_path unless current_user.roles.include?(Role.find(4))
+    end
     
 end

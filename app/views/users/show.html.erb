@@ -67,6 +67,9 @@
     <br>
     <% if @user.roles.include?(Role.find(4)) %>
         <%= button_to "Add Studio", new_studio_path, method: "get" %>
+        <br>
+        <%= button_to "Add Studio Session", new_studio_session_path, method: "get" %>
     <% end %>
 <% end %>
+
 
