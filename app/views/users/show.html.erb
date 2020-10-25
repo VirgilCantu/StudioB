@@ -72,4 +72,9 @@
     <% end %>
 <% end %>
 
+<% if logged_in? %>
+<br>
+<%= button_to "Log Out", logout_path, method: "get" %>
+<% end %>
+
 
