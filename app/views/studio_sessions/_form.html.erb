@@ -1,4 +1,17 @@
 <%= form_for @studio_session do |f| %>
+    <% if @user.errors.any? %>
+        <div id="error_explanation">
+            <h3>
+                <%= pluralize(@user.errors.count, "error") %> prohibited this studio session from being saved:
+            </h3>
+
+        <ul>
+            <% @user.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+        </ul>
+        </div>
+    <% end %>
     
     <%= f.label :session_time, "Requested Session Time" %>
     <br>

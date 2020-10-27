@@ -3,7 +3,7 @@ class StudiosController < ApplicationController
     before_action :set_studio, only: [:show, :edit, :update, :destroy]
     before_action :require_login
     before_action :require_manager, only: [:new, :create, :edit, :update, :destroy]
-    before_action :require_managed_studio, only: [:new, :create, :edit, :update, :destroy]
+    before_action :require_managed_studio, only: [ :edit, :update, :destroy]
     
     def show
     end
