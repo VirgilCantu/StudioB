@@ -2,6 +2,7 @@ class UsersController < ApplicationController
 
     before_action :set_user, only: [:show, :edit, :update, :destroy]
     before_action :require_login, only: [:show, :index, :edit, :update, :destroy]
+    before_action :require_current_user, only: [:edit, :update, :destroy]
 
     def show
     end

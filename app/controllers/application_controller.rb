@@ -22,5 +22,9 @@ class ApplicationController < ActionController::Base
     def require_manager
         redirect_to root_path unless current_user.roles.include?(Role.find(4))
     end
+
+    def require_current_user
+        redirect_to root_path unless current_user.id == params[:id]
+    end
     
 end

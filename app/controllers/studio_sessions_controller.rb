@@ -6,7 +6,7 @@ class StudioSessionsController < ApplicationController
 
     def show
     end
-
+ 
     def index
         if params[:studio_id]
             @studio_sessions = Studio.find(params[:studio_id]).studio_sessions
