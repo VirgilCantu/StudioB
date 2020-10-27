@@ -26,5 +26,9 @@ class ApplicationController < ActionController::Base
     def require_current_user
         redirect_to root_path unless current_user.id == params[:id]
     end
+
+    def require_managed_studio
+        redirect_to root_path unless current_user.id == @studio.studio_manager_id
+    end
     
 end
