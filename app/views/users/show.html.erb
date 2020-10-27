@@ -27,11 +27,9 @@
         <ul>
             <% @user.genres.each do |genre| %>
                 <li><%= genre.name %></li>
-                <br>
             <% end %>
         </ul>
 <% end %>
-
 
 <h3>Current Professional Roles</h3>
 
@@ -61,16 +59,8 @@
 
 
 <% if @user.id == current_user.id %>
-
-    <% if @user.studio_sessions.any?%>
-        <h3>Current Studio Sessions:</h3>
-        <ul>
-            <% @user.studio_sessions.each do |studio_session| %>
-                <li><%= link_to "Studio Session #{studio_session.id}", studio_session %></li>
-            <% end %>     
-        </ul>     
-    <% end %>
-
+    <%= button_to "View Current Studio Sessions", user_studio_sessions_path(@user), method: "get" %>
+    <br>
     <%= button_to "Edit User", edit_user_path(@user), method: "get" %>
     <br>
     <%= button_to "Delete User", @user, method: "delete" %>
@@ -81,5 +71,5 @@
         <%= button_to "Add Studio Session", new_studio_session_path, method: "get" %>
     <% end %>
 <% end %>
-<br>
+
 <%= button_to "Log Out", logout_path, method: "get" %>
