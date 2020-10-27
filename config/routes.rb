@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   root 'application#home'
 
-  get '/auth/facebook/callback' => 'sessions#create'
+  get '/auth/google_oauth2/callback' => 'sessions#google'
 
   get '/login' , to: 'sessions#new'
   post '/login', to: 'sessions#create'

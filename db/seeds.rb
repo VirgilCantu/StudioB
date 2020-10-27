@@ -412,14 +412,14 @@ charles_jefferson.roles << studio_manager
 fame.studio_manager_id = charles_jefferson.id
 fame.save
 
-virgil_cantu = User.create(
-    name: "Virgil Cantu", 
-    email: "virgil@wiseloord.com", 
-    password: "virgilcantu", 
+joe_hilversum = User.create(
+    name: "Joe Hilversum", 
+    email: "joe@wiseloord.com", 
+    password: "joehilversum", 
     location: "Hilversum, Netherlands",
     can_travel: false, 
     picture: "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/799ee441332353.57a1ce913f973.jpg"
 )
-virgil_cantu.roles << studio_manager
-wiseloord.studio_manager_id = virgil_cantu.id
+joe_hilversum.roles << studio_manager
+wiseloord.studio_manager_id = joe_hilversum.id
 wiseloord.save
