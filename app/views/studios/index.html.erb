@@ -5,3 +5,6 @@
     <div><%= link_to studio.name, studio %> - <%= studio.location %></div>
     <br>
 <% end %>
+
+<br>
+<%= button_to "Back to My Profile", user_path(current_user), method: "get" %>

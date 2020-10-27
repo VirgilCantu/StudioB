@@ -4,3 +4,8 @@
     <p>Session Time: <%= studio_session.session_time.strftime("%A, %B %e at %l:%M %p")  %></p>
     <p>Location: <%= link_to studio_session.studio.name, studio_session.studio %></p>
 <% end %>
+
+
+<%= button_to "Back to My Profile", user_path(current_user), method: "get" %>
+<br>
+<%= button_to "Log Out", logout_path, method: "get" %>
