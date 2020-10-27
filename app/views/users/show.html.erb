@@ -61,6 +61,16 @@
 
 
 <% if @user.id == current_user.id %>
+
+    <% if @user.studio_sessions.any?%>
+        <h3>Current Studio Sessions:</h3>
+        <ul>
+            <% @user.studio_sessions.each do |studio_session| %>
+                <li><%= link_to "Studio Session #{studio_session.id}", studio_session %></li>
+            <% end %>     
+        </ul>     
+    <% end %>
+
     <%= button_to "Edit User", edit_user_path(@user), method: "get" %>
     <br>
     <%= button_to "Delete User", @user, method: "delete" %>
