@@ -1,12 +1,12 @@
 <%= form_for @studio do |f| %>
-    <% if @user.errors.any? %>
+    <% if @studio.errors.any? %>
         <div id="error_explanation">
             <h3>
-                <%= pluralize(@user.errors.count, "error") %> prohibited this studio from being saved:
+                <%= pluralize(@studio.errors.count, "error") %> prohibited this studio from being saved:
             </h3>
 
         <ul>
-            <% @user.errors.full_messages.each do |message| %>
+            <% @studio.errors.full_messages.each do |message| %>
                 <li><%= message %></li>
             <% end %>
         </ul>

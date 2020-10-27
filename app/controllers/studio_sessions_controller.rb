@@ -34,6 +34,7 @@ class StudioSessionsController < ApplicationController
         if @studio_session.save
             redirect_to studio_session_path(@studio_session)
         else
+            @studios = Studio.where(studio_manager_id: current_user.id)
             render :new
         end
     end
