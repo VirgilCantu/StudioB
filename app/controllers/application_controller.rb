@@ -30,5 +30,11 @@ class ApplicationController < ActionController::Base
     def require_managed_studio
         redirect_to root_path unless current_user.id == @studio.studio_manager_id
     end
+
+    def studio_managed_by_user
+        if params[:studio_id]
+            redirect_to root_path unless Studio.find_by(id: params[:studio_id]).studio_manager_id == current_user.id
+        end
+    end
     
 end
