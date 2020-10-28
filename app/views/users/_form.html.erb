@@ -72,7 +72,9 @@
     <br>
     <%= f.submit %>
 <% end %>
-<br>
-<%= button_to "Back to My Profile", user_path(current_user), method: "get" %>
+<% if logged_in? %>
+    <br>
+    <%= button_to "Back to My Profile", user_path(current_user), method: "get" %>
+<% end %>
 <br>
 <%= button_to "Log Out", logout_path, method: "get" %>
