@@ -20,19 +20,23 @@ class ApplicationController < ActionController::Base
     end
 
     def require_manager
+        flash[:notice] = "This page requires a Studio Manager role, please try again!"
         redirect_to root_path unless current_user.roles.include?(Role.find(4))
     end
 
     def require_current_user
+        flash[:notice] = "Cannot modify another account other than your own, please try again!"
         redirect_to root_path unless current_user.id == params[:id].to_i
     end
 
     def require_managed_studio
+        flash[:notice] = "Cannot modify a studio that you do not manage, please try again!"
         redirect_to root_path unless current_user.id == @studio.studio_manager_id
     end
 
     def studio_managed_by_user
         if params[:studio_id]
+            flash[:notice] = "Cannot modify a studio session at a studio that you do not manage, please try again!"
             redirect_to root_path unless Studio.find_by(id: params[:studio_id]).studio_manager_id == current_user.id
         end
     end
