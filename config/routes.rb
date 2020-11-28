@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'
 
+  get 'la', to: 'studios#la'
+
   resources :studios do
     resources :studio_sessions, only: [:show, :index, :new, :edit]
   end

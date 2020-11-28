@@ -53,6 +53,12 @@ class StudiosController < ApplicationController
         redirect_to studios_path
     end
 
+    def la 
+        @studios = Studio.where(location: "Los Angeles, California")
+        byebug
+    end
+
+    # .where('roles.name = "Studio Manager"')
 
     private
 

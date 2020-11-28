@@ -65,6 +65,8 @@
     <br>
     <%= button_to "Delete User", @user, method: "delete" %>
     <br>
+    <%= button_to "Add Instrument", @user, method: "get" %>
+    <br>
     <% if @user.roles.include?(Role.find(4)) %>
         <%= button_to "Add Studio", new_studio_path, method: "get" %>
         <br>
