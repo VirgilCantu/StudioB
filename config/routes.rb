@@ -20,5 +20,7 @@ Rails.application.routes.draw do
     resources :studio_sessions, only: [:show, :index]
   end
 
+  resources :instruments 
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
